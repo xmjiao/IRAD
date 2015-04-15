@@ -39,11 +39,13 @@ add_executable(testresults src/TestResults.C)
 add_executable(checkresults src/CheckResults.C)
 add_executable(runtest src/RunTest.C)
 add_executable(profane src/profane.C)
+add_executable(diffdatafiles src/DiffDataFiles.C)
 target_link_libraries(profane IRAD)
 target_link_libraries(runtest IRAD)
 target_link_libraries(iradutil_test IRAD)
 target_link_libraries(checkresults IRAD)
 target_link_libraries(tcpinterface_test IRAD)
+target_link_libraries(diffdatafiles IRAD)
 
 ADD_TEST(IRAD::RunUtilTests ${EXECUTABLE_OUTPUT_PATH}/iradutil_test iradutil_testresults.txt)
 ADD_TEST(IRAD::GetNextContent:CommentsAndWhiteSpace ${EXECUTABLE_OUTPUT_PATH}/testresults GetNextContent:CommentsAndWhiteSpace iradutil_testresults.txt)
@@ -51,5 +53,5 @@ ADD_TEST(IRAD::GetNextContent:StreamObject ${EXECUTABLE_OUTPUT_PATH}/testresults
 
 
 INSTALL(FILES ${INC_FILES} DESTINATION include)
-INSTALL(TARGETS IRAD checkresults testresults profane runtest RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+INSTALL(TARGETS IRAD checkresults testresults profane runtest diffdatafiles RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
 

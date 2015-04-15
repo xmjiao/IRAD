@@ -39,6 +39,11 @@ namespace IRAD
       AddHelp("list",Ostr.str());
       AddOption('f',"file",2,"filename");
       AddHelp("file","Run the particular test specified by <filename>.");
+      AddOption('a',"argument",2,"argument");
+      Ostr.str("");
+      Ostr << "Provide an extra argument in <argument> for runtest to pass"
+           << " to the testing script(s).";
+      AddHelp("argument",Ostr.str());
       //      AddOption('n',"name",2,"TestName");
       //      AddHelp("name","Run test by name. (no default) [disabled!]");
       AddOption('H',"hostname",2,"HostName");

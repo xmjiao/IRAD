@@ -52,6 +52,7 @@ namespace IRAD
     std::string PlatformsName(comline.GetOption("platforms"));
     std::string SourceDirectory(comline.GetOption("srcdir"));
     std::string BinaryDirectory(comline.GetOption("bindir"));
+    std::string ScriptArgument(comline.GetOption("argument"));
 
     if(PlatformsName.empty() && ListName.empty() && FileName.empty()){
       std::cout  << comline.ShortUsage() << std::endl
@@ -223,6 +224,8 @@ namespace IRAD
         Command = Command + " " + SourceDirectory;
       if(!BinaryDirectory.empty())
         Command = Command + " " + BinaryDirectory;
+      if(!ScriptArgument.empty())
+        Command = Command + " " + ScriptArgument;
       if(verblevel > 1)
         std::cout << "IRAD::RunTest> Running command: " << Command << std::endl;
       IRAD::Sys::InProcess TestProcess(Command);
