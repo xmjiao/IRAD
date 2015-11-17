@@ -58,3 +58,27 @@ ADD_TEST(IRAD::GetNextContent:StreamObject ${EXECUTABLE_OUTPUT_PATH}/testresults
 INSTALL(FILES ${INC_FILES} DESTINATION include)
 INSTALL(TARGETS IRAD checkresults testresults profane runtest diffdatafiles RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
 
+# Add target to build the documentation
+option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" OFF)
+IF(BUILD_DOCUMENTATION)
+
+  FIND_PACKAGE(Doxygen)
+  IF(NOT DOXYGEN_FOUND)
+    MESSAGE(FATAL_ERROR "Doxygen is needed to build the documentation.")
+  ENDIF()
+  
+  SET( doxyfile_in          ${CMAKE_CURRENT_SOURCE_DIR}/doc/IMPACT.cfg.in )
+  SET( doxyfile             ${CMAKE_CURRENT_BINARY_DIR}/IMPACT.cfg        )
+  SET( documentation        ${CMAKE_CURRENT_BINARY_DIR}/docs                 )
+
+  CONFIGURE_FILE( ${doxyfile_in} ${doxyfile} @ONLY )
+
+  ADD_CUSTOM_COMMAND( OUTPUT ${documentation}
+                      COMMAND ${DOXYGEN_EXECUTABLE} ${doxyfile}
+                      MAIN_DEPENDENCY ${doxyfile} ${doxyfile_in}
+                      DEPENDS ${doxyfile} ${doxy_extra_files}
+                      COMMENT "Generating documentation")
+
+  ADD_CUSTOM_TARGET( docs ALL DEPENDS ${documentation} )
+  INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs DESTINATION share/IMPACT )
+ENDIF()
