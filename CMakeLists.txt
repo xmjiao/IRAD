@@ -67,8 +67,8 @@ IF(BUILD_DOCUMENTATION)
     MESSAGE(FATAL_ERROR "Doxygen is needed to build the documentation.")
   ENDIF()
   
-  SET( doxyfile_in          ${CMAKE_CURRENT_SOURCE_DIR}/doc/IMPACT.cfg.in )
-  SET( doxyfile             ${CMAKE_CURRENT_BINARY_DIR}/IMPACT.cfg        )
+  SET( doxyfile_in          ${CMAKE_CURRENT_SOURCE_DIR}/doc/IRAD.cfg.in )
+  SET( doxyfile             ${CMAKE_CURRENT_BINARY_DIR}/IRAD.cfg        )
   SET( documentation        ${CMAKE_CURRENT_BINARY_DIR}/docs                 )
 
   CONFIGURE_FILE( ${doxyfile_in} ${doxyfile} @ONLY )
@@ -80,5 +80,5 @@ IF(BUILD_DOCUMENTATION)
                       COMMENT "Generating documentation")
 
   ADD_CUSTOM_TARGET( docs ALL DEPENDS ${documentation} )
-  INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs DESTINATION share/IMPACT )
+  INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs DESTINATION share/IRAD )
 ENDIF()
