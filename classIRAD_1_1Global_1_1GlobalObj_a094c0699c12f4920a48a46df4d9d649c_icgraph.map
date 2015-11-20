@@ -1,0 +1,14 @@
+<map id="IRAD::Global::GlobalObj::Name" name="IRAD::Global::GlobalObj::Name">
+<area shape="rect" id="node3" href="$classIRAD_1_1Global_1_1GlobalObj.html#adeb0d94195d70cb1556f5c3b0edc7744" title="IRAD::Global::GlobalObj\l::DebugOut" alt="" coords="219,21,384,67"/>
+<area shape="rect" id="node5" href="$classIRAD_1_1Global_1_1GlobalObj.html#afb55820c3116adc8265e4f6b2c9b5c7b" title="IRAD::Global::GlobalObj\l::ErrOut" alt="" coords="219,90,384,137"/>
+<area shape="rect" id="node7" href="$classIRAD_1_1Global_1_1GlobalObj.html#a9d47a920cf3e593d1d4ba42bcfdd8a84" title="IRAD::Global::GlobalObj\l::FName" alt="" coords="219,159,384,206"/>
+<area shape="rect" id="node19" href="$classIRAD_1_1Global_1_1GlobalObj.html#aff6d945651a1147ffa510e861aeb408b" title="IRAD::Global::GlobalObj\l::LogOut" alt="" coords="219,229,384,275"/>
+<area shape="rect" id="node21" href="$classIRAD_1_1Global_1_1GlobalObj.html#a6a0d3b29b76943a903a3f00e278cb21b" title="IRAD::Global::GlobalObj\l::StdOut" alt="" coords="219,313,384,359"/>
+<area shape="rect" id="node9" href="$classIRAD_1_1Global_1_1GlobalObj.html#a77ef0be39249774e64fea2e27249c29f" title="IRAD::Global::GlobalObj\l::DeRegister" alt="" coords="432,5,597,51"/>
+<area shape="rect" id="node11" href="$classIRAD_1_1Global_1_1GlobalObj.html#a38eba130be43e634978cd0ef04a2bf7c" title="FunctionEntry updates the Stack as well as the Profiler. " alt="" coords="432,74,597,121"/>
+<area shape="rect" id="node13" href="$classIRAD_1_1Global_1_1GlobalObj.html#a8895894d8f3949a6e65a735136089102" title="FunctionExit updates the Stack as well as the Profiler. " alt="" coords="432,143,597,190"/>
+<area shape="rect" id="node15" href="$classIRAD_1_1Global_1_1GlobalObj.html#a5013cbf6bc83f718caddfbcd34190c68" title="IRAD::Global::GlobalObj\l::Register" alt="" coords="432,213,597,259"/>
+<area shape="rect" id="node17" href="$classIRAD_1_1Global_1_1GlobalObj.html#a2579962b34019f9488657dfe96f5e469" title="IRAD::Global::GlobalObj\l::SetName" alt="" coords="432,282,597,329"/>
+<area shape="rect" id="node23" href="$group__irad__group.html#gad32237561ebfead2556fbf127a0f3b4d" title="IRAD::MyTestProgram" alt="" coords="437,352,592,381"/>
+<area shape="rect" id="node25" href="$QuickTest_8C.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="645,352,696,381"/>
+</map>

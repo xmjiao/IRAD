@@ -1,0 +1,15 @@
+<map id="IRAD::MyTestProgram" name="IRAD::MyTestProgram">
+<area shape="rect" id="node3" href="$classIRAD_1_1Global_1_1Program.html#a2cf8524e10435292639251826402f633" title="IRAD::Global::Program\l::Finalize" alt="" coords="227,74,384,121"/>
+<area shape="rect" id="node5" href="$classIRAD_1_1TestProgram.html#af6d64d096ee6aff4c9e2eb625d97ca73" title="IRAD::TestProgram::\lInitialize" alt="" coords="232,143,379,190"/>
+<area shape="rect" id="node22" href="$classIRAD_1_1Global_1_1GlobalObj.html#a9b0ddde48e11ee209c9b3d5e471f0639" title="Gets the stdout stream object. " alt="" coords="223,213,388,259"/>
+<area shape="rect" id="node24" href="$classIRAD_1_1Global_1_1Program.html#a282e9353da0b7ab45eab8745c7f253ca" title="IRAD::Global::Program::Run" alt="" coords="211,283,400,312"/>
+<area shape="rect" id="node26" href="$classIRAD_1_1Global_1_1GlobalObj.html#a6a0d3b29b76943a903a3f00e278cb21b" title="IRAD::Global::GlobalObj\l::StdOut" alt="" coords="223,335,388,382"/>
+<area shape="rect" id="node7" href="$classIRAD_1_1Global_1_1Program.html#af2e7f5c1cace5c15e9625794757e2aeb" title="IRAD::Global::Program\l::Initialize" alt="" coords="460,5,617,51"/>
+<area shape="rect" id="node9" href="$classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b" title="Get the value of an option. " alt="" coords="448,74,629,121"/>
+<area shape="rect" id="node11" href="$classIRAD_1_1Util_1_1ComLineObject.html#a45e40a32eb69b7e0855d014594b82cef" title="Generate long usage string. " alt="" coords="448,143,629,190"/>
+<area shape="rect" id="node13" href="$classIRAD_1_1Util_1_1ComLineObject.html#a067e343f0778eedfa6862306d7fb7ed3" title="Generate short usage string. " alt="" coords="677,173,859,219"/>
+<area shape="rect" id="node17" href="$classIRAD_1_1Util_1_1ComLineObject.html#a51e0c021a3c95127e34f034beda9aace" title="Error reporting. " alt="" coords="448,263,629,310"/>
+<area shape="rect" id="node15" href="$classIRAD_1_1Util_1_1ComLineObject.html#a2e76a2a193b8b2c2170755e5282a1791" title="Obtains option strings by type. " alt="" coords="907,173,1088,219"/>
+<area shape="rect" id="node19" href="$namespaceIRAD_1_1Util.html#a4ea296883ee0ef3abec17b7cd6730411" title="Dump container contents. " alt="" coords="679,272,857,301"/>
+<area shape="rect" id="node28" href="$classIRAD_1_1Global_1_1GlobalObj.html#a094c0699c12f4920a48a46df4d9d649c" title="IRAD::Global::GlobalObj\l::Name" alt="" coords="456,335,621,382"/>
+</map>

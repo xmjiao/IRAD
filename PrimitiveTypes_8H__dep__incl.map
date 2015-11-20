@@ -1,0 +1,18 @@
+<map id="PrimitiveTypes.H" name="PrimitiveTypes.H">
+<area shape="rect" id="node3" href="$primitive__utilities_8H.html" title="Basic utility header. " alt="" coords="315,83,448,112"/>
+<area shape="rect" id="node5" href="$COMM_8H.html" title="Communication utilities. " alt="" coords="75,160,152,189"/>
+<area shape="rect" id="node11" href="$Parameters_8H.html" title="Parameters object interface (for config files, etc) " alt="" coords="272,160,373,189"/>
+<area shape="rect" id="node27" href="$Global_8H.html" title="Base global object header. " alt="" coords="176,160,248,189"/>
+<area shape="rect" id="node30" href="$ComLine_8C.html" title="ComLineObject implementation. " alt="" coords="397,160,485,189"/>
+<area shape="rect" id="node32" href="$primitive__utilities_8C.html" title="Primitive utils implementation. " alt="" coords="509,160,643,189"/>
+<area shape="rect" id="node34" href="$Profiler_8C.html" title="Performance Profiling implementation. " alt="" coords="667,160,744,189"/>
+<area shape="rect" id="node7" href="$COMM_8C.html" title="MPI Communication utils implementation. " alt="" coords="5,237,83,267"/>
+<area shape="rect" id="node9" href="$QuickTest_8C.html" title="Parallel test program. " alt="" coords="107,237,203,267"/>
+<area shape="rect" id="node13" href="$Configuration_8H.html" title="Configuration object interface (for config files, etc). " alt="" coords="227,237,339,267"/>
+<area shape="rect" id="node19" href="$Testing_8H.html" title="Testing constructs for unit testing. " alt="" coords="363,237,440,267"/>
+<area shape="rect" id="node25" href="$Parameters_8C.html" title="Parameters object implementation. " alt="" coords="464,237,565,267"/>
+<area shape="rect" id="node15" href="$Menu_8H.html" title="Text menu system for user interfaces. " alt="" coords="136,315,203,344"/>
+<area shape="rect" id="node17" href="$Configuration_8C.html" title="Configuration object implementation (for config files, etc) " alt="" coords="227,315,339,344"/>
+<area shape="rect" id="node21" href="$UtilTest_8H.html" title="Testing object for primitive utilities. " alt="" coords="363,315,445,344"/>
+<area shape="rect" id="node23" href="$TestUtil_8C.html" title="Implementation of the IRAD::Util namespace tests. " alt="" coords="363,392,445,421"/>
+</map>
