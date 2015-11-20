@@ -16,7 +16,8 @@ ENDIF(BUILD_TESTING)
 
 # Project-specific constructs
 include_directories(include ${CMAKE_BINARY_DIR}/include )
-find_package(MPI)
+find_package(MPI REQUIRED)
+
 set (LIB_SOURCES src/ComLine.C src/Parameters.C src/Configuration.C src/Profiler.C src/UnixUtils.C)
 IF(MPI_CXX_COMPILER)
 #  set (CMAKE_CXX_COMPILER ${MPI_CXX_COMPILER})
@@ -68,17 +69,17 @@ IF(BUILD_DOCUMENTATION)
   ENDIF()
   
   SET( doxyfile_in          ${CMAKE_CURRENT_SOURCE_DIR}/doc/IRAD.cfg.in )
-  SET( doxyfile             ${CMAKE_CURRENT_BINARY_DIR}/IRAD.cfg        )
-  SET( documentation        ${CMAKE_CURRENT_BINARY_DIR}/docs                 )
+  SET( doxyfile             ${CMAKE_CURRENT_BINARY_DIR}/IRAD.cfg )
+  SET( documentation        ${CMAKE_CURRENT_BINARY_DIR}/docs )
 
   CONFIGURE_FILE( ${doxyfile_in} ${doxyfile} @ONLY )
 
   ADD_CUSTOM_COMMAND( OUTPUT ${documentation}
                       COMMAND ${DOXYGEN_EXECUTABLE} ${doxyfile}
                       MAIN_DEPENDENCY ${doxyfile} ${doxyfile_in}
-                      DEPENDS ${doxyfile} ${doxy_extra_files}
+                      DEPENDS IRAD ${doxyfile} ${doxy_extra_files}
                       COMMENT "Generating documentation")
 
-  ADD_CUSTOM_TARGET( docs ALL DEPENDS ${documentation} )
+  ADD_CUSTOM_TARGET( docs DEPENDS ${documentation} )
   INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs DESTINATION share/IRAD )
 ENDIF()
