@@ -1,6 +1,0 @@
-<map id="Menu.H" name="Menu.H">
-<area shape="rect" id="node3" href="$Configuration_8H.html" title="Configuration object interface (for config files, etc). " alt="" coords="148,83,260,112"/>
-<area shape="rect" id="node7" href="$Parameters_8H.html" title="Parameters object interface (for config files, etc) " alt="" coords="205,160,307,189"/>
-<area shape="rect" id="node9" href="$primitive__utilities_8H.html" title="Basic utility header. " alt="" coords="189,237,323,267"/>
-<area shape="rect" id="node21" href="$PrimitiveTypes_8H.html" title="Simple utility classes. " alt="" coords="453,315,576,344"/>
-</map>

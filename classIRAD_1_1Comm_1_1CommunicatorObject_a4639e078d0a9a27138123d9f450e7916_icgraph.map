@@ -1,7 +1,0 @@
-<map id="IRAD::Comm::CommunicatorObject::ResolveDataType" name="IRAD::Comm::CommunicatorObject::ResolveDataType">
-<area shape="rect" id="node3" href="$classIRAD_1_1Comm_1_1CommunicatorObject.html#a8ca1d572f267d1b4441db979a9811486" title="IRAD::Comm::Communicator\lObject::AllReduce" alt="" coords="248,5,443,51"/>
-<area shape="rect" id="node11" href="$classIRAD_1_1Comm_1_1CommunicatorObject.html#a16e34a27f82dcfd466643945bdbbd25a" title="IRAD::Comm::Communicator\lObject::Reduce" alt="" coords="248,74,443,121"/>
-<area shape="rect" id="node5" href="$classIRAD_1_1Comm_1_1CommunicatorObject.html#ace390f113e18ac70301a80c8db49d98e" title="IRAD::Comm::Communicator\lObject::AllGatherv" alt="" coords="491,5,685,51"/>
-<area shape="rect" id="node7" href="$classIRAD_1_1Comm_1_1CommunicatorObject.html#ac089d2893d45379e896fd2b311d1d8fc" title="IRAD::Comm::Communicator\lObject::_AllGatherMOV" alt="" coords="733,5,928,51"/>
-<area shape="rect" id="node9" href="$classIRAD_1_1Comm_1_1CommunicatorObject.html#a5ee3c8f1ebed350556faba5ebd1eb981" title="IRAD::Comm::Communicator\lObject::AllGatherMOV" alt="" coords="976,5,1171,51"/>
-</map>

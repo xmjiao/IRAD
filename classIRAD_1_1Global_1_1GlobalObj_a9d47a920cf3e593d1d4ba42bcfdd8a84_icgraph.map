@@ -1,7 +1,0 @@
-<map id="IRAD::Global::GlobalObj::FName" name="IRAD::Global::GlobalObj::FName">
-<area shape="rect" id="node3" href="$classIRAD_1_1Global_1_1GlobalObj.html#a77ef0be39249774e64fea2e27249c29f" title="IRAD::Global::GlobalObj\l::DeRegister" alt="" coords="219,5,384,51"/>
-<area shape="rect" id="node5" href="$classIRAD_1_1Global_1_1GlobalObj.html#a38eba130be43e634978cd0ef04a2bf7c" title="FunctionEntry updates the Stack as well as the Profiler. " alt="" coords="219,74,384,121"/>
-<area shape="rect" id="node7" href="$classIRAD_1_1Global_1_1GlobalObj.html#a8895894d8f3949a6e65a735136089102" title="FunctionExit updates the Stack as well as the Profiler. " alt="" coords="219,143,384,190"/>
-<area shape="rect" id="node9" href="$classIRAD_1_1Global_1_1GlobalObj.html#a5013cbf6bc83f718caddfbcd34190c68" title="IRAD::Global::GlobalObj\l::Register" alt="" coords="219,213,384,259"/>
-<area shape="rect" id="node11" href="$classIRAD_1_1Global_1_1GlobalObj.html#a2579962b34019f9488657dfe96f5e469" title="IRAD::Global::GlobalObj\l::SetName" alt="" coords="219,282,384,329"/>
-</map>

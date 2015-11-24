@@ -1,8 +1,0 @@
-<map id="UnixUtils.H" name="UnixUtils.H">
-<area shape="rect" id="node3" href="$Global_8H.html" title="Base global object header. " alt="" coords="17,83,89,112"/>
-<area shape="rect" id="node7" href="$DiffDataFiles_8C.html" title="Implements a command&#45;line interface for runnning tests. " alt="" coords="113,83,225,112"/>
-<area shape="rect" id="node9" href="$RunTest_8C.html" title="Implements a command&#45;line interface for runnning tests. " alt="" coords="249,83,335,112"/>
-<area shape="rect" id="node11" href="$TestTCPInterface_8C.html" title="TCP Interface Test utility. " alt="" coords="359,83,497,112"/>
-<area shape="rect" id="node13" href="$UnixUtils_8C.html" title="Unix System tools implementation. " alt="" coords="521,83,612,112"/>
-<area shape="rect" id="node5" href="$QuickTest_8C.html" title="Parallel test program. " alt="" coords="5,160,101,189"/>
-</map>

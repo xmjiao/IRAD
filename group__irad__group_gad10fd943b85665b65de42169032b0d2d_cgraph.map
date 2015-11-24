@@ -1,8 +1,0 @@
-<map id="IRAD::Util::UtilTest" name="IRAD::Util::UtilTest">
-<area shape="rect" id="node3" href="$classIRAD_1_1Util_1_1TestObject.html#a33495dc8ccf7a7ae128412bde2537cd9" title="Process all tests and populate a &quot;results&quot; object. " alt="" coords="192,74,347,121"/>
-<area shape="rect" id="node5" href="$classIRAD_1_1Util_1_1TestObject.html#adef39c108d1b84be144838acb2b713e0" title="Set up the tests and any test fixture constructs. " alt="" coords="404,5,559,51"/>
-<area shape="rect" id="node7" href="$classIRAD_1_1Util_1_1TestObject.html#ac5eaeb876025ace1c2a3f30b06b412ea" title="IRAD::Util::TestObject\l::Test__GetNextContent" alt="" coords="399,74,564,121"/>
-<area shape="rect" id="node13" href="$classIRAD_1_1Util_1_1TestingObject.html#a847eae21e807563d069668e127f287ad" title="Clean up any test fixtures that need cleaning. " alt="" coords="396,144,567,208"/>
-<area shape="rect" id="node9" href="$namespaceIRAD_1_1Util.html#a822cb43696495d4562ff3b431b5b5f85" title="IRAD::Util::GetNextContent" alt="" coords="616,52,803,81"/>
-<area shape="rect" id="node11" href="$classIRAD_1_1Util_1_1TestResults.html#a6e5f14b113bac1c4714b8827a8feb411" title="IRAD::Util::TestResults\l::UpdateResult" alt="" coords="628,105,791,151"/>
-</map>

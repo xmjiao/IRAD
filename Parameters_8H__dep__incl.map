@@ -1,9 +1,0 @@
-<map id="Parameters.H" name="Parameters.H">
-<area shape="rect" id="node3" href="$Configuration_8H.html" title="Configuration object interface (for config files, etc). " alt="" coords="96,83,208,112"/>
-<area shape="rect" id="node9" href="$Testing_8H.html" title="Testing constructs for unit testing. " alt="" coords="233,83,311,112"/>
-<area shape="rect" id="node15" href="$Parameters_8C.html" title="Parameters object implementation. " alt="" coords="335,83,436,112"/>
-<area shape="rect" id="node5" href="$Menu_8H.html" title="Text menu system for user interfaces. " alt="" coords="5,160,72,189"/>
-<area shape="rect" id="node7" href="$Configuration_8C.html" title="Configuration object implementation (for config files, etc) " alt="" coords="96,160,208,189"/>
-<area shape="rect" id="node11" href="$UtilTest_8H.html" title="Testing object for primitive utilities. " alt="" coords="232,160,315,189"/>
-<area shape="rect" id="node13" href="$TestUtil_8C.html" title="Implementation of the IRAD::Util namespace tests. " alt="" coords="232,237,315,267"/>
-</map>

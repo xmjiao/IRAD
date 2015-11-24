@@ -1,9 +1,0 @@
-<map id="IRAD::Util::ComLineObject::AddArgument" name="IRAD::Util::ComLineObject::AddArgument">
-<area shape="rect" id="node3" href="$classIRAD_1_1DDFComLine.html#a363857f13fcabfb46b31885699e2a68e" title="virtual function for program specific Initialization. " alt="" coords="236,5,433,35"/>
-<area shape="rect" id="node9" href="$classIRAD_1_1TestComLine.html#a3e5d9d01e46f9231149dc6b1e5a12278" title="virtual function for program specific Initialization. " alt="" coords="260,58,409,105"/>
-<area shape="rect" id="node11" href="$classIRAD_1_1Profiler_1_1ProfaneComLine.html#a5a94e1f47d75ec3e4d19dbd500a9acbf" title="virtual function for program specific Initialization. " alt="" coords="243,127,427,174"/>
-<area shape="rect" id="node5" href="$namespaceIRAD.html#aff76a3773427cbc6cb10681f11395de0" title="IRAD::DiffDataFiles" alt="" coords="492,5,631,35"/>
-<area shape="rect" id="node7" href="$DiffDataFiles_8C.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="688,5,739,35"/>
-<area shape="rect" id="node13" href="$group__irad__group.html#ga803db3462ef317c1e978518a3b1d12bd" title="IRAD::Profiler::Profane" alt="" coords="483,136,640,165"/>
-<area shape="rect" id="node15" href="$profane_8C.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="688,136,739,165"/>
-</map>
