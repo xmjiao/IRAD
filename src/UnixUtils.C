@@ -8,6 +8,8 @@
 
 #include "UnixUtils.H"
 
+extern char **environ;
+
 namespace IRAD {
   namespace Sys {
 
