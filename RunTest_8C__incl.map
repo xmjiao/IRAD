@@ -1,6 +1,6 @@
 <map id="RunTest.C" name="RunTest.C">
-<area shape="rect" id="node7" href="$UnixUtils_8H.html" title="Unix System Tools interface. " alt="" coords="733,83,824,112"/>
-<area shape="rect" id="node37" href="$ComLine_8H.html" title="ComLineObject header. " alt="" coords="1145,83,1233,112"/>
-<area shape="rect" id="node46" href="$FDUtils_8H.html" title="Implementation of stream object for Unix file descriptors. " alt="" coords="511,83,591,112"/>
-<area shape="rect" id="node59" href="$RunTest_8H.html" title="Implements a command&#45;line interface for runnning tests. " alt="" coords="1348,83,1433,112"/>
+<area shape="rect" id="node7" href="$UnixUtils_8H.html" title="Unix System Tools interface. " alt="" coords="745,83,836,112"/>
+<area shape="rect" id="node37" href="$ComLine_8H.html" title="ComLineObject header. " alt="" coords="927,83,1015,112"/>
+<area shape="rect" id="node48" href="$FDUtils_8H.html" title="Implementation of stream object for Unix file descriptors. " alt="" coords="507,83,587,112"/>
+<area shape="rect" id="node61" href="$RunTest_8H.html" title="Implements a command&#45;line interface for runnning tests. " alt="" coords="1129,83,1215,112"/>
 </map>

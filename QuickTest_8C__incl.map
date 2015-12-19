@@ -1,9 +1,9 @@
 <map id="QuickTest.C" name="QuickTest.C">
-<area shape="rect" id="node3" href="$Global_8H.html" title="Base global object header. " alt="" coords="945,83,1017,112"/>
-<area shape="rect" id="node63" href="$Profiler_8H.html" title="Performance Profiling interface definition. " alt="" coords="1557,160,1634,189"/>
-<area shape="rect" id="node72" href="$COMM_8H.html" title="Communication utilities. " alt="" coords="1250,83,1327,112"/>
-<area shape="rect" id="node5" href="$ComLine_8H.html" title="ComLineObject header. " alt="" coords="103,160,191,189"/>
-<area shape="rect" id="node17" href="$UnixUtils_8H.html" title="Unix System Tools interface. " alt="" coords="683,160,774,189"/>
-<area shape="rect" id="node44" href="$primitive__utilities_8H.html" title="Basic utility header. " alt="" coords="1222,160,1355,189"/>
-<area shape="rect" id="node53" href="$PrimitiveTypes_8H.html" title="Simple utility classes. " alt="" coords="1683,237,1806,267"/>
+<area shape="rect" id="node3" href="$Global_8H.html" title="Base global object header. " alt="" coords="1023,83,1095,112"/>
+<area shape="rect" id="node65" href="$Profiler_8H.html" title="Performance Profiling interface definition. " alt="" coords="1635,160,1713,189"/>
+<area shape="rect" id="node74" href="$COMM_8H.html" title="Communication utilities. " alt="" coords="1329,83,1406,112"/>
+<area shape="rect" id="node5" href="$ComLine_8H.html" title="ComLineObject header. " alt="" coords="137,160,225,189"/>
+<area shape="rect" id="node19" href="$UnixUtils_8H.html" title="Unix System Tools interface. " alt="" coords="762,160,853,189"/>
+<area shape="rect" id="node46" href="$primitive__utilities_8H.html" title="Basic utility header. " alt="" coords="1301,160,1434,189"/>
+<area shape="rect" id="node55" href="$PrimitiveTypes_8H.html" title="Simple utility classes. " alt="" coords="1762,237,1885,267"/>
 </map>
