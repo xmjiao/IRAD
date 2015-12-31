@@ -507,6 +507,39 @@ namespace IRAD {
     }
   
     ///
+    /// \brief Process a range in the format "t1:t2".
+    ///
+    template<typename NumType>
+    void ProcessRange(NumType &t1,NumType &t2,const std::string stinter)
+    {
+      if(!stinter.empty()){
+        std::string::size_type x = stinter.find(":");
+        std::string t1s = stinter;
+        std::string t2s = stinter;
+        if(x != std::string::npos){
+          t1s = stinter.substr(0,x);
+          t2s = stinter.substr(x+1);
+          if(!t2s.empty()){
+            std::istringstream Istr(t2s);
+            Istr >> t2;
+          }
+        }
+        else {
+          t1s.erase();
+        }
+        if(!t1s.empty()){
+          std::istringstream Istr(t1s);
+          Istr >> t1;
+        }
+        if(!t2s.empty()){
+          std::istringstream Istr(t2s);
+          Istr >> t2;
+        }
+
+      }
+    }
+
+    ///
     /// \brief File opener
     ///
     inline int OpenFile(std::ifstream &Inf,const std::string &filename)
