@@ -21,6 +21,7 @@ var primitive__utilities_8H =
     [ "MultiContainer2CSR", "primitive__utilities_8H.html#a02f681ea914ef9e856e88a5d52620d2b", null ],
     [ "NumberOfEdges", "primitive__utilities_8H.html#aa73a099314120c36d8eb47a4d7c766d5", null ],
     [ "OpenFile", "primitive__utilities_8H.html#a35e1d2021031f6da25c48c8d2db3e500", null ],
+    [ "ProcessRange", "primitive__utilities_8H.html#aca49d8fbcb6a93d8777e78ae099243c5", null ],
     [ "SortPermutation", "primitive__utilities_8H.html#a22cc414694b2328b2d042ff3447b91dc", null ],
     [ "String2Buf", "primitive__utilities_8H.html#aae5ab52e4ddfa4183821f08fd59d6b89", null ],
     [ "stripdirs", "primitive__utilities_8H.html#a9f9c5c71c884a0f174fc5c24f9373078", null ],

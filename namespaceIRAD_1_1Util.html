@@ -224,6 +224,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a9b5578e7663679212e55850f1f05dce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIRAD_1_1Util.html#a9b5578e7663679212e55850f1f05dce7">TokenizeString</a> (std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;source, const char delim)</td></tr>
 <tr class="memdesc:a9b5578e7663679212e55850f1f05dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenize string w/ delimiter.  <a href="#a9b5578e7663679212e55850f1f05dce7">More...</a><br /></td></tr>
 <tr class="separator:a9b5578e7663679212e55850f1f05dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca49d8fbcb6a93d8777e78ae099243c5"><td class="memTemplParams" colspan="2">template&lt;typename NumType &gt; </td></tr>
+<tr class="memitem:aca49d8fbcb6a93d8777e78ae099243c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceIRAD_1_1Util.html#aca49d8fbcb6a93d8777e78ae099243c5">ProcessRange</a> (NumType &amp;t1, NumType &amp;t2, const std::string stinter)</td></tr>
+<tr class="memdesc:aca49d8fbcb6a93d8777e78ae099243c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a range in the format "t1:t2".  <a href="#aca49d8fbcb6a93d8777e78ae099243c5">More...</a><br /></td></tr>
+<tr class="separator:aca49d8fbcb6a93d8777e78ae099243c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e1d2021031f6da25c48c8d2db3e500"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIRAD_1_1Util.html#a35e1d2021031f6da25c48c8d2db3e500">OpenFile</a> (std::ifstream &amp;Inf, const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a35e1d2021031f6da25c48c8d2db3e500"><td class="mdescLeft">&#160;</td><td class="mdescRight">File opener.  <a href="#a35e1d2021031f6da25c48c8d2db3e500">More...</a><br /></td></tr>
 <tr class="separator:a35e1d2021031f6da25c48c8d2db3e500"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1265,13 +1269,13 @@ template&lt;typename ConType , typename IConType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00512">512</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    {</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      Inf.open(filename.c_str());</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      <span class="keywordflow">if</span>(!Inf)</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">return</span>(-1);</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00545">545</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    {</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      Inf.open(filename.c_str());</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      <span class="keywordflow">if</span>(!Inf)</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        <span class="keywordflow">return</span>(-1);</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1733,6 +1737,69 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aca49d8fbcb6a93d8777e78ae099243c5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRAD::Util::ProcessRange </td>
+          <td>(</td>
+          <td class="paramtype">NumType &amp;&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumType &amp;&#160;</td>
+          <td class="paramname"><em>t2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>stinter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00513">513</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      <span class="keywordflow">if</span>(!stinter.empty()){</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        std::string::size_type x = stinter.find(<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        std::string t1s = stinter;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        std::string t2s = stinter;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">if</span>(x != std::string::npos){</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;          t1s = stinter.substr(0,x);</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;          t2s = stinter.substr(x+1);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;          <span class="keywordflow">if</span>(!t2s.empty()){</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            std::istringstream Istr(t2s);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            Istr &gt;&gt; t2;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;          }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        }</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;          t1s.erase();</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">if</span>(!t1s.empty()){</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;          std::istringstream Istr(t1s);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;          Istr &gt;&gt; t1;</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        }</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">if</span>(!t2s.empty()){</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;          std::istringstream Istr(t2s);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;          Istr &gt;&gt; t2;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        }</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      }</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="a22cc414694b2328b2d042ff3447b91dc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2137,12 +2204,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00522">522</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    {</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      <span class="keywordflow">while</span>(in[i] != NULL)</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        retVal.push_back(in[i++]);</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00555">555</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    {</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      <span class="keywordflow">while</span>(in[i] != NULL)</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        retVal.push_back(in[i++]);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2184,14 +2251,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00530">530</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    {</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      <span class="comment">//  retVal.resize(0);</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;      <span class="keywordflow">if</span>(n &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;      <span class="keywordflow">while</span>((in[i] != NULL) &amp;&amp; i &lt; n)</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        retVal.push_back(in[i++]);</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="primitive__utilities_8H_source.html#l00563">563</a> of file <a class="el" href="primitive__utilities_8H_source.html">primitive_utilities.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;      <span class="comment">//  retVal.resize(0);</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;      <span class="keywordflow">if</span>(n &lt;= 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;      <span class="keywordflow">while</span>((in[i] != NULL) &amp;&amp; i &lt; n)</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        retVal.push_back(in[i++]);</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2201,7 +2268,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceIRAD.html">IRAD</a></li><li class="navelem"><a class="el" href="namespaceIRAD_1_1Util.html">Util</a></li>
-    <li class="footer">Generated on Thu Dec 31 2015 02:00:25 for IRAD by
+    <li class="footer">Generated on Fri Jan 1 2016 02:00:34 for IRAD by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
