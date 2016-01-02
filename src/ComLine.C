@@ -190,7 +190,7 @@ namespace IRAD {
       std::ostringstream Ostr;
       if(!_description.empty())
 	Ostr << _description << std::endl << std::endl;
-      Ostr << _program_name << " Usage: " << std::endl
+      Ostr << "Usage: " << std::endl
 	   << std::endl << ShortUsage() << std::endl << std::endl;
       std::vector<std::pair<char,std::string> >::const_iterator ti = this->begin();
       while(ti != this->end()){
