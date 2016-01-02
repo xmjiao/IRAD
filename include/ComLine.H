@@ -92,6 +92,8 @@ namespace IRAD {
       std::vector<std::pair<std::string,int> > _args;
       /// help string for args
       std::map<std::string,std::string> _arghelp;
+      /// commandline tokens
+      std::vector<std::string> _toks;
     public:
       ///
       /// Default constructor.

@@ -319,6 +319,7 @@ namespace IRAD {
       std::ostringstream Ostr;
       _program_name.assign(stripdirs(args[0]));
       while(args[i]){
+        _toks.push_back(std::string(args[i]));
 	Ostr << args[i++];
 	if(args[i])
 	  Ostr << " ";
@@ -330,8 +331,8 @@ namespace IRAD {
     {
       bool end_of_ops = false;
       int errs = 0;
-      std::vector<std::string> args;
-      TokenizeString(args,_line);
+      std::vector<std::string> &args(_toks);
+      //      TokenizeString(args,_line);
       std::vector<std::string>::iterator ai = args.begin();
       while(ai != args.end()){
 	std::string this_argument = *ai++;

@@ -397,7 +397,7 @@ namespace IRAD {
 	_DebugStream = _DebugStreamSave;
       };
 
-      virtual int StdOut(const std::string &outstr,unsigned char inlev = 0)
+      virtual int StdOut(const std::string &outstr,unsigned char inlev = 1)
       {
 	if(_OutStream && _verb_level >= inlev){
 	  std::string line;
