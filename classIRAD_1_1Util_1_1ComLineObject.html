@@ -275,6 +275,9 @@ Protected Attributes</h2></td></tr>
 std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a7a15f13fa27c4a292d4ae4a4eb71aa38">_arghelp</a></td></tr>
 <tr class="memdesc:a7a15f13fa27c4a292d4ae4a4eb71aa38"><td class="mdescLeft">&#160;</td><td class="mdescRight">help string for args  <a href="#a7a15f13fa27c4a292d4ae4a4eb71aa38">More...</a><br /></td></tr>
 <tr class="separator:a7a15f13fa27c4a292d4ae4a4eb71aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ccfe0a837ff5795af9b8e860c21eda"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda">_toks</a></td></tr>
+<tr class="memdesc:a90ccfe0a837ff5795af9b8e860c21eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">commandline tokens  <a href="#a90ccfe0a837ff5795af9b8e860c21eda">More...</a><br /></td></tr>
+<tr class="separator:a90ccfe0a837ff5795af9b8e860c21eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -295,7 +298,7 @@ Collaboration diagram for IRAD::Util::ComLineObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIRAD_1_1Util_1_1ComLineObject__coll__graph.png" border="0" usemap="#IRAD_1_1Util_1_1ComLineObject_coll__map" alt="Collaboration graph"/></div>
 <map name="IRAD_1_1Util_1_1ComLineObject_coll__map" id="IRAD_1_1Util_1_1ComLineObject_coll__map">
-<area shape="rect" id="node2" title="STL class. " alt="" coords="387,525,536,571"/><area shape="rect" id="node12" title="STL class. " alt="" coords="240,343,363,372"/><area shape="rect" id="node27" title="STL class. " alt="" coords="244,469,359,499"/><area shape="rect" id="node8" title="STL class. " alt="" coords="261,125,341,155"/><area shape="rect" id="node10" title="STL class. " alt="" coords="7,117,132,163"/></map>
+<area shape="rect" id="node2" title="STL class. " alt="" coords="387,530,536,577"/><area shape="rect" id="node12" title="STL class. " alt="" coords="240,348,363,377"/><area shape="rect" id="node27" title="STL class. " alt="" coords="244,475,359,504"/><area shape="rect" id="node8" title="STL class. " alt="" coords="261,131,341,160"/><area shape="rect" id="node10" title="STL class. " alt="" coords="7,122,132,169"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9df775af4a5143dc0203a4295b0c3464"></a>
@@ -320,8 +323,8 @@ Collaboration diagram for IRAD::Util::ComLineObject:</div>
 </div><div class="memdoc">
 <p>Default constructor. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00099">99</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{};</div>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00101">101</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -349,12 +352,12 @@ Collaboration diagram for IRAD::Util::ComLineObject:</div>
 <p>Constructor.</p>
 <p>Typically, args comes directly from <em>argv</em>. One must be careful about environments in which extra arguments are stored in argv. A good example is MPI. MPI_Init(&amp;argc,&amp;argv) should be invoked before any <a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html">ComLineObject</a> is constructed. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00108">108</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00110">110</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">Record</a>(args);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">Record</a>(args);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a4cb7a09efdcf8b00f095586474a1b80d"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">IRAD::Util::ComLineObject::Record</a></div><div class="ttdeci">void Record(const char *args[])</div><div class="ttdoc">Minimal recording of command line. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00316">ComLine.C:316</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -423,8 +426,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00383">383</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{};</div>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00385">385</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -462,14 +465,14 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>This function is provided for the specification of the usage information for application arguments. This is called after the argument has been set by AddArgument(...). The string specified in "help" string is displayed in the output of <a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a45e40a32eb69b7e0855d014594b82cef" title="Generate long usage string. ">LongUsage()</a>. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00194">194</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00196">196</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00094">_arghelp</a>.</p>
 
 <p>Referenced by <a class="el" href="DiffDataFiles_8H_source.html#l00025">IRAD::DDFComLine::Initialize()</a>, <a class="el" href="QuickTest_8C_source.html#l00027">IRAD::TestComLine::Initialize()</a>, and <a class="el" href="profane_8C_source.html#l00031">IRAD::Profiler::ProfaneComLine::Initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a7a15f13fa27c4a292d4ae4a4eb71aa38">_arghelp</a>[a] = help;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a7a15f13fa27c4a292d4ae4a4eb71aa38">_arghelp</a>[a] = help;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a7a15f13fa27c4a292d4ae4a4eb71aa38"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a7a15f13fa27c4a292d4ae4a4eb71aa38">IRAD::Util::ComLineObject::_arghelp</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; _arghelp</div><div class="ttdoc">help string for args </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00094">ComLine.H:94</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -516,15 +519,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>This function is provided for the specification of an argument to the application (i.e. a non-option argument), and whether the argument is required for the application to function. The function arguments are the name of the argument, and an integer which is &gt; 0 for required application arguments. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00180">180</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00182">182</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00092">_args</a>.</p>
 
 <p>Referenced by <a class="el" href="DiffDataFiles_8H_source.html#l00025">IRAD::DDFComLine::Initialize()</a>, <a class="el" href="QuickTest_8C_source.html#l00027">IRAD::TestComLine::Initialize()</a>, and <a class="el" href="profane_8C_source.html#l00031">IRAD::Profiler::ProfaneComLine::Initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">//_args.push_back(std::make_pair&lt;std::string,int&gt;(a,reqd));</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.push_back(std::make_pair(a,reqd));</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">//_args.push_back(std::make_pair&lt;std::string,int&gt;(a,reqd));</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.push_back(std::make_pair(a,reqd));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac44ce68be0273a069d842a1cd3fe6031"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">IRAD::Util::ComLineObject::_args</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; _args</div><div class="ttdoc">application arguments; </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00092">ComLine.H:92</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -571,12 +574,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Function is used to set the usage string for an option which is displayed in the output of <a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a45e40a32eb69b7e0855d014594b82cef" title="Generate long usage string. ">LongUsage()</a>. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00224">224</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00226">226</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00086">_help</a>.</p>
 
 <p>Referenced by <a class="el" href="RunTest_8H_source.html#l00024">IRAD::RTSComLine::Initialize()</a>, <a class="el" href="DiffDataFiles_8H_source.html#l00025">IRAD::DDFComLine::Initialize()</a>, <a class="el" href="QuickTest_8C_source.html#l00027">IRAD::TestComLine::Initialize()</a>, <a class="el" href="profane_8C_source.html#l00031">IRAD::Profiler::ProfaneComLine::Initialize()</a>, and <a class="el" href="CheckResults_8H_source.html#l00060">IRAD::CheckResultsComLine::Initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[s] = help;};</div>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[s] = help;};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a1060b2a12814006731a366773da5b26f"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">IRAD::Util::ComLineObject::_help</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _help</div><div class="ttdoc">stores the help string for each op </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00086">ComLine.H:86</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -623,12 +626,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Function is used to set the usage string for an option which is displayed in the output of <a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a45e40a32eb69b7e0855d014594b82cef" title="Generate long usage string. ">LongUsage()</a>. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00231">231</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00233">233</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00086">_help</a>, and <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)] = help;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)] = help;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a05eb03d8153fa8d2c5d151c38297d0d5"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">IRAD::Util::ComLineObject::GetShort</a></div><div class="ttdeci">char GetShort(const std::string &amp;l)</div><div class="ttdoc">Obtain the short one char option from the long word version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00284">ComLine.C:284</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a1060b2a12814006731a366773da5b26f"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">IRAD::Util::ComLineObject::_help</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _help</div><div class="ttdoc">stores the help string for each op </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00086">ComLine.H:86</a></div></div>
 </div><!-- fragment -->
@@ -875,17 +878,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns a report of the errors encountered in the <a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098" title="Processes all command line tokens. ">ProcessOptions()</a> function. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00472">472</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00473">473</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00080">_error_messages</a>, <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>, and <a class="el" href="primitive__utilities_8H_source.html#l00080">IRAD::Util::DumpContents()</a>.</p>
 
 <p>Referenced by <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="QuickTest_8C_source.html#l00081">IRAD::TestProgram::Initialize()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;      std::ostringstream Ostr;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      Ostr &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a> &lt;&lt; <span class="stringliteral">&quot; command line errors: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      <a class="code" href="namespaceIRAD_1_1Util.html#a4ea296883ee0ef3abec17b7cd6730411">Util::DumpContents</a>(Ostr,<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;      <span class="keywordflow">return</span>(Ostr.str());</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      std::ostringstream Ostr;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      Ostr &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a> &lt;&lt; <span class="stringliteral">&quot; command line errors: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;      <a class="code" href="namespaceIRAD_1_1Util.html#a4ea296883ee0ef3abec17b7cd6730411">Util::DumpContents</a>(Ostr,<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;      <span class="keywordflow">return</span>(Ostr.str());</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    }</div>
 <div class="ttc" id="namespaceIRAD_1_1Util_html_a4ea296883ee0ef3abec17b7cd6730411"><div class="ttname"><a href="namespaceIRAD_1_1Util.html#a4ea296883ee0ef3abec17b7cd6730411">IRAD::Util::DumpContents</a></div><div class="ttdeci">void DumpContents(std::ostream &amp;Ostr, const ContainerType &amp;c, std::string del=&quot;\n&quot;)</div><div class="ttdoc">Dump container contents. </div><div class="ttdef"><b>Definition:</b> <a href="primitive__utilities_8H_source.html#l00080">primitive_utilities.H:80</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a29941a9c9b4d3fa81646c0acc537f920"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">IRAD::Util::ComLineObject::_error_messages</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _error_messages</div><div class="ttdoc">stores error messages </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00080">ComLine.H:80</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
@@ -931,12 +934,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00311">311</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00313">313</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00082">_nonops</a>.</p>
 
 <p>Referenced by <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, and <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>;};</div>
+<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>;};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ae48878aae1db44a14fbfa6751f9d15dd"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">IRAD::Util::ComLineObject::_nonops</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _nonops</div><div class="ttdoc">stores non-option arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00082">ComLine.H:82</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -972,10 +975,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00245">245</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00247">247</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00086">_help</a>.</p>
-<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[s]);};</div>
+<div class="fragment"><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[s]);};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a1060b2a12814006731a366773da5b26f"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">IRAD::Util::ComLineObject::_help</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _help</div><div class="ttdoc">stores the help string for each op </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00086">ComLine.H:86</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1002,10 +1005,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00249">249</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00251">251</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00086">_help</a>, and <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)]);};</div>
+<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">_help</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)]);};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a05eb03d8153fa8d2c5d151c38297d0d5"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">IRAD::Util::ComLineObject::GetShort</a></div><div class="ttdeci">char GetShort(const std::string &amp;l)</div><div class="ttdoc">Obtain the short one char option from the long word version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00284">ComLine.C:284</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a1060b2a12814006731a366773da5b26f"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a1060b2a12814006731a366773da5b26f">IRAD::Util::ComLineObject::_help</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _help</div><div class="ttdoc">stores the help string for each op </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00086">ComLine.H:86</a></div></div>
 </div><!-- fragment -->
@@ -1036,7 +1039,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8C_source.html#l00221">221</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator ti = this-&gt;begin();</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">while</span>(ti != this-&gt;end()){</div>
@@ -1134,12 +1137,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns the value of the specified option. If the option has not been set on the command line, then the value will be an empty string. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00288">288</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00290">290</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00084">_options</a>.</p>
 
-<p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>, <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="QuickTest_8C_source.html#l00081">IRAD::TestProgram::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[s]);};</div>
+<p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>, <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="QuickTest_8C_source.html#l00081">IRAD::TestProgram::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[s]);};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a666cd21df8e5141743c96b28b7363bdf"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">IRAD::Util::ComLineObject::_options</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _options</div><div class="ttdoc">stores the value of each option </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00084">ComLine.H:84</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -1176,10 +1179,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns the value of the specified option. If the option has not been set on the command line, then the value will be an empty string. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00296">296</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00298">298</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00084">_options</a>, and <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)]);};</div>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{<span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(l)]);};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a05eb03d8153fa8d2c5d151c38297d0d5"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">IRAD::Util::ComLineObject::GetShort</a></div><div class="ttdeci">char GetShort(const std::string &amp;l)</div><div class="ttdoc">Obtain the short one char option from the long word version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00284">ComLine.C:284</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a666cd21df8e5141743c96b28b7363bdf"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">IRAD::Util::ComLineObject::_options</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _options</div><div class="ttdoc">stores the value of each option </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00084">ComLine.H:84</a></div></div>
 </div><!-- fragment -->
@@ -1215,10 +1218,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00131">131</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00133">133</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00078">_line</a>, and <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>+std::string(<span class="stringliteral">&quot; &quot;</span>)+<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>);};</div>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>+std::string(<span class="stringliteral">&quot; &quot;</span>)+<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>);};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a767b24ddfbc94c48e6b21669657daa6e"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">IRAD::Util::ComLineObject::_line</a></div><div class="ttdeci">std::string _line</div><div class="ttdoc">unformatted command line </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00078">ComLine.H:78</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
 </div><!-- fragment -->
@@ -1240,7 +1243,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8C_source.html#l00284">284</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00231">AddHelp()</a>, <a class="el" href="ComLine_8H_source.html#l00249">GetHelp()</a>, <a class="el" href="ComLine_8H_source.html#l00296">GetOption()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, and <a class="el" href="ComLine_8H_source.html#l00204">SetArgName()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00233">AddHelp()</a>, <a class="el" href="ComLine_8H_source.html#l00251">GetHelp()</a>, <a class="el" href="ComLine_8H_source.html#l00298">GetOption()</a>, <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, and <a class="el" href="ComLine_8H_source.html#l00206">SetArgName()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator ti = this-&gt;begin();</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">while</span>(ti != this-&gt;end()){</div>
@@ -1286,8 +1289,8 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="classIRAD_1_1CheckResultsComLine.html#a78402947ac7c5abd51f58315850e0b9e">IRAD::CheckResultsComLine</a>, <a class="el" href="classIRAD_1_1Profiler_1_1ProfaneComLine.html#a5a94e1f47d75ec3e4d19dbd500a9acbf">IRAD::Profiler::ProfaneComLine</a>, <a class="el" href="classIRAD_1_1TestComLine.html#a3e5d9d01e46f9231149dc6b1e5a12278">IRAD::TestComLine</a>, <a class="el" href="classIRAD_1_1DDFComLine.html#a363857f13fcabfb46b31885699e2a68e">IRAD::DDFComLine</a>, and <a class="el" href="classIRAD_1_1RTSComLine.html#a8312608f6a13356a4d090918c81b5525">IRAD::RTSComLine</a>.</p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00382">382</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;{};</div>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00384">384</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1307,14 +1310,14 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8C_source.html#l00188">188</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
-<p>References <a class="el" href="ComLine_8H_source.html#l00094">_arghelp</a>, <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>, <a class="el" href="ComLine_8H_source.html#l00092">_args</a>, <a class="el" href="ComLine_8H_source.html#l00072">_description</a>, <a class="el" href="ComLine_8H_source.html#l00086">_help</a>, <a class="el" href="ComLine_8H_source.html#l00074">_notes</a>, <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>, <a class="el" href="ComLine_8H_source.html#l00090">_type</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+<p>References <a class="el" href="ComLine_8H_source.html#l00094">_arghelp</a>, <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>, <a class="el" href="ComLine_8H_source.html#l00092">_args</a>, <a class="el" href="ComLine_8H_source.html#l00072">_description</a>, <a class="el" href="ComLine_8H_source.html#l00086">_help</a>, <a class="el" href="ComLine_8H_source.html#l00074">_notes</a>, <a class="el" href="ComLine_8H_source.html#l00090">_type</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
 
 <p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>, <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="QuickTest_8C_source.html#l00081">IRAD::TestProgram::Initialize()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      std::ostringstream Ostr;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keywordflow">if</span>(!<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">_description</a>.empty())</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        Ostr &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">_description</a> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      Ostr &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a> &lt;&lt; <span class="stringliteral">&quot; Usage: &quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      Ostr &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; std::endl</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;           &lt;&lt; std::endl &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a067e343f0778eedfa6862306d7fb7ed3">ShortUsage</a>() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::const_iterator ti = this-&gt;begin();</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordflow">while</span>(ti != this-&gt;end()){</div>
@@ -1349,7 +1352,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac08b5db6cf7b23c4de9f6edf96309f77"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac08b5db6cf7b23c4de9f6edf96309f77">IRAD::Util::ComLineObject::_notes</a></div><div class="ttdeci">std::string _notes</div><div class="ttdoc">Notes to be displayed at the end of LongUsage(). </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00074">ComLine.H:74</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_aee3a9b1a8a8c5affa5d1869848d2f1f4"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">IRAD::Util::ComLineObject::_argname</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _argname</div><div class="ttdoc">stores a name for arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00088">ComLine.H:88</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a83bfe6fde73b4ee555a61f15d42deccb"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">IRAD::Util::ComLineObject::_description</a></div><div class="ttdeci">std::string _description</div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00072">ComLine.H:72</a></div></div>
-<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1394,22 +1396,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>One fell swoop processing of command line. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00123">123</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00125">125</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>References <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">Record</a>(args);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098">ProcessOptions</a>());</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      };</div>
+<p>References <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">Record</a>(args);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098">ProcessOptions</a>());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a4cb7a09efdcf8b00f095586474a1b80d"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d">IRAD::Util::ComLineObject::Record</a></div><div class="ttdeci">void Record(const char *args[])</div><div class="ttdoc">Minimal recording of command line. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00316">ComLine.C:316</a></div></div>
-<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a795c851f2358e6e652e547c1a61c1098"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098">IRAD::Util::ComLineObject::ProcessOptions</a></div><div class="ttdeci">int ProcessOptions()</div><div class="ttdoc">Processes all command line tokens. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00329">ComLine.C:329</a></div></div>
+<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a795c851f2358e6e652e547c1a61c1098"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098">IRAD::Util::ComLineObject::ProcessOptions</a></div><div class="ttdeci">int ProcessOptions()</div><div class="ttdoc">Processes all command line tokens. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00330">ComLine.C:330</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIRAD_1_1Util_1_1ComLineObject_ad155a66e2c0844359b21fd7508ae9e47_cgraph.png" border="0" usemap="#classIRAD_1_1Util_1_1ComLineObject_ad155a66e2c0844359b21fd7508ae9e47_cgraph" alt=""/></div>
 <map name="classIRAD_1_1Util_1_1ComLineObject_ad155a66e2c0844359b21fd7508ae9e47_cgraph" id="classIRAD_1_1Util_1_1ComLineObject_ad155a66e2c0844359b21fd7508ae9e47_cgraph">
-<area shape="rect" id="node3" href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098" title="Processes all command line tokens. " alt="" coords="235,127,416,174"/><area shape="rect" id="node13" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d" title="Minimal recording of command line. " alt="" coords="235,227,416,274"/><area shape="rect" id="node5" href="namespaceIRAD_1_1Util.html#a76159a3e7425db322e90956fdc7a1337" title="Tokenize string. " alt="" coords="465,5,644,35"/><area shape="rect" id="node7" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5" title="Obtain the short one char option from the long word version. " alt="" coords="464,58,645,105"/><area shape="rect" id="node9" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f" title="Obtain the long word option from the short char version. " alt="" coords="464,127,645,174"/><area shape="rect" id="node11" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b" title="Get the value of an option. " alt="" coords="464,197,645,243"/><area shape="rect" id="node15" href="namespaceIRAD_1_1Util.html#a9f9c5c71c884a0f174fc5c24f9373078" title="Strip absolute path. " alt="" coords="487,267,623,296"/></map>
+<area shape="rect" id="node3" href="classIRAD_1_1Util_1_1ComLineObject.html#a795c851f2358e6e652e547c1a61c1098" title="Processes all command line tokens. " alt="" coords="235,90,416,137"/><area shape="rect" id="node11" href="classIRAD_1_1Util_1_1ComLineObject.html#a4cb7a09efdcf8b00f095586474a1b80d" title="Minimal recording of command line. " alt="" coords="235,174,416,221"/><area shape="rect" id="node5" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5" title="Obtain the short one char option from the long word version. " alt="" coords="464,5,645,51"/><area shape="rect" id="node7" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f" title="Obtain the long word option from the short char version. " alt="" coords="464,74,645,121"/><area shape="rect" id="node9" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b" title="Get the value of an option. " alt="" coords="464,143,645,190"/><area shape="rect" id="node13" href="namespaceIRAD_1_1Util.html#a9f9c5c71c884a0f174fc5c24f9373078" title="Strip absolute path. " alt="" coords="487,213,623,243"/></map>
 </div>
 </p>
 
@@ -1429,159 +1431,158 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>This function examines all the command line tokens, sorts them into their respective types, and assigns their values. The number of errors encountered during processing is returned. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00329">329</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00330">330</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
-<p>References <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>, <a class="el" href="ComLine_8H_source.html#l00092">_args</a>, <a class="el" href="ComLine_8H_source.html#l00080">_error_messages</a>, <a class="el" href="ComLine_8H_source.html#l00078">_line</a>, <a class="el" href="ComLine_8H_source.html#l00082">_nonops</a>, <a class="el" href="ComLine_8H_source.html#l00084">_options</a>, <a class="el" href="ComLine_8H_source.html#l00090">_type</a>, <a class="el" href="ComLine_8C_source.html#l00221">GetLong()</a>, <a class="el" href="ComLine_8H_source.html#l00288">GetOption()</a>, <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>, and <a class="el" href="primitive__utilities_8H_source.html#l00476">IRAD::Util::TokenizeString()</a>.</p>
+<p>References <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>, <a class="el" href="ComLine_8H_source.html#l00092">_args</a>, <a class="el" href="ComLine_8H_source.html#l00080">_error_messages</a>, <a class="el" href="ComLine_8H_source.html#l00082">_nonops</a>, <a class="el" href="ComLine_8H_source.html#l00084">_options</a>, <a class="el" href="ComLine_8H_source.html#l00096">_toks</a>, <a class="el" href="ComLine_8H_source.html#l00090">_type</a>, <a class="el" href="ComLine_8C_source.html#l00221">GetLong()</a>, <a class="el" href="ComLine_8H_source.html#l00290">GetOption()</a>, and <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>.</p>
 
-<p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>, <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="ComLine_8H_source.html#l00123">ProcessCommandLine()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordtype">bool</span> end_of_ops = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordtype">int</span> errs = 0;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      std::vector&lt;std::string&gt; args;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <a class="code" href="namespaceIRAD_1_1Util.html#a76159a3e7425db322e90956fdc7a1337">TokenizeString</a>(args,<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      std::vector&lt;std::string&gt;::iterator ai = args.begin();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordflow">while</span>(ai != args.end()){</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        std::string this_argument = *ai++;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        std::string next_argument;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">if</span>(ai != args.end())</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          next_argument = *ai--;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        std::string::iterator si = this_argument.begin();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span>(*si == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; !end_of_ops){</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          si++;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          <span class="keywordflow">if</span>(si == this_argument.end())</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            end_of_ops = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          <span class="keywordflow">if</span>(*si != <span class="charliteral">&#39;-&#39;</span>) { <span class="comment">// then we are processing a short option</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">while</span>(si != this_argument.end()){</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;              <span class="keywordtype">char</span> flag_char = *si++;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;              std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator oi = this-&gt;begin();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;              <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;              <span class="keywordflow">while</span>((oi != this-&gt;end()) &amp;&amp; !found){</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">if</span>(flag_char == oi-&gt;first){</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                  found = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                  <span class="keywordflow">if</span>(si == this_argument.end()){  <span class="comment">// means it&#39;s not a string of flags</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] != 0){</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                      <span class="keywordflow">if</span>(!next_argument.empty() &amp;&amp; next_argument[0] != <span class="charliteral">&#39;-&#39;</span>){</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = next_argument;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        ai++;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                      }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){ <span class="comment">// next arg wasn&#39;t valid, err if reqd</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        errs++;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        std::ostringstream Ostr;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                        Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                      }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                  }</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                  <span class="keywordflow">else</span>{ <span class="comment">// it&#39;s a string of flags</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){ <span class="comment">// it requires an argument, can&#39;t be in a flag string</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                      errs++;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                      std::ostringstream Ostr;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                      Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                  }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                }</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                oi++;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;              }</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;              <span class="keywordflow">if</span>(!found){</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                errs++;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                std::ostringstream Ostr;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; is unrecognized.&quot;</span>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;              }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;          }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;          <span class="keywordflow">else</span> { <span class="comment">// we are processing a long option</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            std::string opstring = this_argument.substr(2);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordtype">char</span> flag_char = <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(opstring);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordflow">if</span>(flag_char != <span class="charliteral">&#39;\0&#39;</span>){</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;              <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] != 0){</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                <span class="keywordflow">if</span>(!next_argument.empty() &amp;&amp; next_argument[0] != <span class="charliteral">&#39;-&#39;</span>){</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = next_argument;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                  ai++;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                  errs++;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                  std::ostringstream Ostr;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                  Ostr &lt;&lt; <span class="stringliteral">&quot;Option --&quot;</span> &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f">GetLong</a>(flag_char)</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;              }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;              <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            }</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;              errs++;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;              std::ostringstream Ostr;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;              Ostr &lt;&lt; <span class="stringliteral">&quot;Option --&quot;</span> &lt;&lt; opstring &lt;&lt; <span class="stringliteral">&quot; is unrecognized.&quot;</span>;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;              <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;          }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        }</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">else</span> { <span class="comment">// non option arguments</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;          <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>.push_back(this_argument);</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        }</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">if</span>(ai != args.end())</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;          ai++;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      <span class="comment">// After finished parsing all arguments, go back and determine</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <span class="comment">// whether any required input was missing.</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      <span class="comment">// </span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="comment">// First, process the options</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator oi = this-&gt;begin();</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      <span class="keywordflow">while</span>(oi != this-&gt;end()){</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b">GetOption</a>(oi-&gt;first).empty() &amp;&amp; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[oi-&gt;first]==3){</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;          errs++;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;          std::ostringstream Ostr;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;          Ostr &lt;&lt; <span class="stringliteral">&quot;Required option: -&quot;</span> &lt;&lt; oi-&gt;first &lt;&lt; <span class="stringliteral">&quot;,--&quot;</span> &lt;&lt; oi-&gt;second </div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;               &lt;&lt; <span class="stringliteral">&quot; &lt;&quot;</span> &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[oi-&gt;first] &lt;&lt; <span class="stringliteral">&quot;&gt; was not specified.&quot;</span>;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;          <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        oi++;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;      }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      <span class="comment">// Next, make sure there were enough nonop args</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nreqd_args = 0;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      std::vector&lt;std::pair&lt;std::string,int&gt; &gt;::iterator aai = <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.begin();</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      <span class="keywordflow">while</span>(aai != <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.end()){</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="keywordflow">if</span>(aai-&gt;second &gt; 0)</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;          nreqd_args++;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        aai++;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;      }</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      <span class="keywordflow">if</span>(nreqd_args &gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>.size()){</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        errs++;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        std::ostringstream Ostr;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        Ostr &lt;&lt; <span class="stringliteral">&quot;Missing required arguments.&quot;</span>;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;      }</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;      <span class="keywordflow">return</span>(errs);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    }</div>
+<p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>, <a class="el" href="DiffDataFiles_8C_source.html#l00030">IRAD::DiffDataFiles()</a>, <a class="el" href="ComLine_8H_source.html#l00125">ProcessCommandLine()</a>, <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>, and <a class="el" href="RunTest_8C_source.html#l00017">IRAD::RunTest()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordtype">bool</span> end_of_ops = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      <span class="keywordtype">int</span> errs = 0;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      std::vector&lt;std::string&gt; &amp;args(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda">_toks</a>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      <span class="comment">//      TokenizeString(args,_line);</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      std::vector&lt;std::string&gt;::iterator ai = args.begin();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordflow">while</span>(ai != args.end()){</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        std::string this_argument = *ai++;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        std::string next_argument;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span>(ai != args.end())</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;          next_argument = *ai--;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        std::string::iterator si = this_argument.begin();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span>(*si == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; !end_of_ops){</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          si++;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          <span class="keywordflow">if</span>(si == this_argument.end())</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            end_of_ops = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          <span class="keywordflow">if</span>(*si != <span class="charliteral">&#39;-&#39;</span>) { <span class="comment">// then we are processing a short option</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">while</span>(si != this_argument.end()){</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;              <span class="keywordtype">char</span> flag_char = *si++;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;              std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator oi = this-&gt;begin();</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;              <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;              <span class="keywordflow">while</span>((oi != this-&gt;end()) &amp;&amp; !found){</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <span class="keywordflow">if</span>(flag_char == oi-&gt;first){</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                  found = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                  <span class="keywordflow">if</span>(si == this_argument.end()){  <span class="comment">// means it&#39;s not a string of flags</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] != 0){</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                      <span class="keywordflow">if</span>(!next_argument.empty() &amp;&amp; next_argument[0] != <span class="charliteral">&#39;-&#39;</span>){</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = next_argument;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                        ai++;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                      }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){ <span class="comment">// next arg wasn&#39;t valid, err if reqd</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        errs++;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                        std::ostringstream Ostr;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                        Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                      }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                  }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                  <span class="keywordflow">else</span>{ <span class="comment">// it&#39;s a string of flags</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){ <span class="comment">// it requires an argument, can&#39;t be in a flag string</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                      errs++;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                      std::ostringstream Ostr;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                      Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                  }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                oi++;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;              }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;              <span class="keywordflow">if</span>(!found){</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                errs++;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                std::ostringstream Ostr;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                Ostr &lt;&lt; <span class="stringliteral">&quot;Option -&quot;</span> &lt;&lt; flag_char &lt;&lt; <span class="stringliteral">&quot; is unrecognized.&quot;</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;              }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;          }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;          <span class="keywordflow">else</span> { <span class="comment">// we are processing a long option</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            std::string opstring = this_argument.substr(2);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordtype">char</span> flag_char = <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(opstring);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">if</span>(flag_char != <span class="charliteral">&#39;\0&#39;</span>){</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;              <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] != 0){</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">if</span>(!next_argument.empty() &amp;&amp; next_argument[0] != <span class="charliteral">&#39;-&#39;</span>){</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = next_argument;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                  ai++;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[flag_char] &gt; 1){</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                  errs++;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                  std::ostringstream Ostr;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                  Ostr &lt;&lt; <span class="stringliteral">&quot;Option --&quot;</span> &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f">GetLong</a>(flag_char)</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                       &lt;&lt; <span class="stringliteral">&quot; requires an argument.&quot;</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                  <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;              }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;              <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">_options</a>[flag_char] = <span class="stringliteral">&quot;.true.&quot;</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;              errs++;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;              std::ostringstream Ostr;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;              Ostr &lt;&lt; <span class="stringliteral">&quot;Option --&quot;</span> &lt;&lt; opstring &lt;&lt; <span class="stringliteral">&quot; is unrecognized.&quot;</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;              <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;          }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">else</span> { <span class="comment">// non option arguments</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;          <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>.push_back(this_argument);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">if</span>(ai != args.end())</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;          ai++;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <span class="comment">// After finished parsing all arguments, go back and determine</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      <span class="comment">// whether any required input was missing.</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="comment">// </span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      <span class="comment">// First, process the options</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      std::vector&lt;std::pair&lt;char,std::string&gt; &gt;::iterator oi = this-&gt;begin();</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      <span class="keywordflow">while</span>(oi != this-&gt;end()){</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b">GetOption</a>(oi-&gt;first).empty() &amp;&amp; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">_type</a>[oi-&gt;first]==3){</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;          errs++;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;          std::ostringstream Ostr;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;          Ostr &lt;&lt; <span class="stringliteral">&quot;Required option: -&quot;</span> &lt;&lt; oi-&gt;first &lt;&lt; <span class="stringliteral">&quot;,--&quot;</span> &lt;&lt; oi-&gt;second </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;               &lt;&lt; <span class="stringliteral">&quot; &lt;&quot;</span> &lt;&lt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[oi-&gt;first] &lt;&lt; <span class="stringliteral">&quot;&gt; was not specified.&quot;</span>;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;          <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        oi++;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;      <span class="comment">// Next, make sure there were enough nonop args</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nreqd_args = 0;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      std::vector&lt;std::pair&lt;std::string,int&gt; &gt;::iterator aai = <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.begin();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      <span class="keywordflow">while</span>(aai != <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">_args</a>.end()){</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">if</span>(aai-&gt;second &gt; 0)</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;          nreqd_args++;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        aai++;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      }</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="keywordflow">if</span>(nreqd_args &gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">_nonops</a>.size()){</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        errs++;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        std::ostringstream Ostr;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        Ostr &lt;&lt; <span class="stringliteral">&quot;Missing required arguments.&quot;</span>;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">_error_messages</a>.push_back(Ostr.str());</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;      }</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;      <span class="keywordflow">return</span>(errs);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac44ce68be0273a069d842a1cd3fe6031"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac44ce68be0273a069d842a1cd3fe6031">IRAD::Util::ComLineObject::_args</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; _args</div><div class="ttdoc">application arguments; </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00092">ComLine.H:92</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a5676370279a0bfe35fd7c599d74ac20f"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f">IRAD::Util::ComLineObject::GetLong</a></div><div class="ttdeci">std::string GetLong(const char &amp;s)</div><div class="ttdoc">Obtain the long word option from the short char version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00221">ComLine.C:221</a></div></div>
-<div class="ttc" id="namespaceIRAD_1_1Util_html_a76159a3e7425db322e90956fdc7a1337"><div class="ttname"><a href="namespaceIRAD_1_1Util.html#a76159a3e7425db322e90956fdc7a1337">IRAD::Util::TokenizeString</a></div><div class="ttdeci">void TokenizeString(std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;source)</div><div class="ttdoc">Tokenize string. </div><div class="ttdef"><b>Definition:</b> <a href="primitive__utilities_8H_source.html#l00476">primitive_utilities.H:476</a></div></div>
-<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a767b24ddfbc94c48e6b21669657daa6e"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">IRAD::Util::ComLineObject::_line</a></div><div class="ttdeci">std::string _line</div><div class="ttdoc">unformatted command line </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00078">ComLine.H:78</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a3992a7c3d279e0b36ce0100d93701919"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919">IRAD::Util::ComLineObject::_type</a></div><div class="ttdeci">std::map&lt; char, int &gt; _type</div><div class="ttdoc">stores the type of option </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00090">ComLine.H:90</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a05eb03d8153fa8d2c5d151c38297d0d5"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">IRAD::Util::ComLineObject::GetShort</a></div><div class="ttdeci">char GetShort(const std::string &amp;l)</div><div class="ttdoc">Obtain the short one char option from the long word version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00284">ComLine.C:284</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ae48878aae1db44a14fbfa6751f9d15dd"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ae48878aae1db44a14fbfa6751f9d15dd">IRAD::Util::ComLineObject::_nonops</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _nonops</div><div class="ttdoc">stores non-option arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00082">ComLine.H:82</a></div></div>
+<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a90ccfe0a837ff5795af9b8e860c21eda"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda">IRAD::Util::ComLineObject::_toks</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _toks</div><div class="ttdoc">commandline tokens </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00096">ComLine.H:96</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a666cd21df8e5141743c96b28b7363bdf"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf">IRAD::Util::ComLineObject::_options</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _options</div><div class="ttdoc">stores the value of each option </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00084">ComLine.H:84</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a29941a9c9b4d3fa81646c0acc537f920"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a29941a9c9b4d3fa81646c0acc537f920">IRAD::Util::ComLineObject::_error_messages</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _error_messages</div><div class="ttdoc">stores error messages </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00080">ComLine.H:80</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_aee3a9b1a8a8c5affa5d1869848d2f1f4"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">IRAD::Util::ComLineObject::_argname</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _argname</div><div class="ttdoc">stores a name for arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00088">ComLine.H:88</a></div></div>
-<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a8ca7d7320345bfb666fa5a27447e937b"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b">IRAD::Util::ComLineObject::GetOption</a></div><div class="ttdeci">std::string GetOption(const char &amp;s)</div><div class="ttdoc">Get the value of an option. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00288">ComLine.H:288</a></div></div>
+<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a8ca7d7320345bfb666fa5a27447e937b"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b">IRAD::Util::ComLineObject::GetOption</a></div><div class="ttdeci">std::string GetOption(const char &amp;s)</div><div class="ttdoc">Get the value of an option. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00290">ComLine.H:290</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIRAD_1_1Util_1_1ComLineObject_a795c851f2358e6e652e547c1a61c1098_cgraph.png" border="0" usemap="#classIRAD_1_1Util_1_1ComLineObject_a795c851f2358e6e652e547c1a61c1098_cgraph" alt=""/></div>
 <map name="classIRAD_1_1Util_1_1ComLineObject_a795c851f2358e6e652e547c1a61c1098_cgraph" id="classIRAD_1_1Util_1_1ComLineObject_a795c851f2358e6e652e547c1a61c1098_cgraph">
-<area shape="rect" id="node3" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f" title="Obtain the long word option from the short char version. " alt="" coords="235,5,416,51"/><area shape="rect" id="node5" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b" title="Get the value of an option. " alt="" coords="235,74,416,121"/><area shape="rect" id="node7" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5" title="Obtain the short one char option from the long word version. " alt="" coords="235,143,416,190"/><area shape="rect" id="node9" href="namespaceIRAD_1_1Util.html#a76159a3e7425db322e90956fdc7a1337" title="Tokenize string. " alt="" coords="236,213,415,243"/></map>
+<area shape="rect" id="node3" href="classIRAD_1_1Util_1_1ComLineObject.html#a5676370279a0bfe35fd7c599d74ac20f" title="Obtain the long word option from the short char version. " alt="" coords="235,5,416,51"/><area shape="rect" id="node5" href="classIRAD_1_1Util_1_1ComLineObject.html#a8ca7d7320345bfb666fa5a27447e937b" title="Get the value of an option. " alt="" coords="235,74,416,121"/><area shape="rect" id="node7" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5" title="Obtain the short one char option from the long word version. " alt="" coords="235,143,416,190"/></map>
 </div>
 </p>
 
@@ -1636,36 +1637,36 @@ template&lt;typename NumType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00332">332</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00334">334</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00008">IRAD::Util::CheckResults()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">if</span>(!stinter.empty()){</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;          std::string::size_type x = stinter.find(<span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          std::string t1s = stinter;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;          std::string t2s = stinter;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          <span class="keywordflow">if</span>(x != std::string::npos){</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            t1s = stinter.substr(0,x);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            t2s = stinter.substr(x+1);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span>(!t2s.empty()){</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;              std::istringstream Istr(t2s);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;              Istr &gt;&gt; t2;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            }</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          }</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            t1s.erase();</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;          }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          <span class="keywordflow">if</span>(!t1s.empty()){</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            std::istringstream Istr(t1s);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            Istr &gt;&gt; t1;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;          }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;          <span class="keywordflow">if</span>(!t2s.empty()){</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            std::istringstream Istr(t2s);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            Istr &gt;&gt; t2;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;          }</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">if</span>(!stinter.empty()){</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;          std::string::size_type x = stinter.find(<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          std::string t1s = stinter;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;          std::string t2s = stinter;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          <span class="keywordflow">if</span>(x != std::string::npos){</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            t1s = stinter.substr(0,x);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            t2s = stinter.substr(x+1);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordflow">if</span>(!t2s.empty()){</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;              std::istringstream Istr(t2s);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;              Istr &gt;&gt; t2;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;          <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            t1s.erase();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;          <span class="keywordflow">if</span>(!t1s.empty()){</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            std::istringstream Istr(t1s);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            Istr &gt;&gt; t1;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;          }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;          <span class="keywordflow">if</span>(!t2s.empty()){</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            std::istringstream Istr(t2s);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            Istr &gt;&gt; t2;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;          }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      };</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1699,12 +1700,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00307">307</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00309">309</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>.</p>
 
 <p>Referenced by <a class="el" href="profane_8C_source.html#l00062">IRAD::Profiler::Profane()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>;};</div>
+<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>;};</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -1732,8 +1733,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00481">481</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
-<div class="fragment"><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;{<span class="keywordflow">return</span>;}</div>
+<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00482">482</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
+<div class="fragment"><div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;{<span class="keywordflow">return</span>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1754,21 +1755,23 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8C_source.html#l00316">316</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
-<p>References <a class="el" href="ComLine_8H_source.html#l00078">_line</a>, <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>, and <a class="el" href="primitive__utilities_8H_source.html#l00461">IRAD::Util::stripdirs()</a>.</p>
+<p>References <a class="el" href="ComLine_8H_source.html#l00078">_line</a>, <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>, <a class="el" href="ComLine_8H_source.html#l00096">_toks</a>, and <a class="el" href="primitive__utilities_8H_source.html#l00461">IRAD::Util::stripdirs()</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00108">ComLineObject()</a>, and <a class="el" href="ComLine_8H_source.html#l00123">ProcessCommandLine()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00110">ComLineObject()</a>, and <a class="el" href="ComLine_8H_source.html#l00125">ProcessCommandLine()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordtype">int</span> i = 1;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      std::ostringstream Ostr;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>.assign(<a class="code" href="namespaceIRAD_1_1Util.html#a9f9c5c71c884a0f174fc5c24f9373078">stripdirs</a>(args[0]));</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      <span class="keywordflow">while</span>(args[i]){</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        Ostr &lt;&lt; args[i++];</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span>(args[i])</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;          Ostr &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>.assign(Ostr.str());</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda">_toks</a>.push_back(std::string(args[i]));</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        Ostr &lt;&lt; args[i++];</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">if</span>(args[i])</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;          Ostr &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>.assign(Ostr.str());</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a767b24ddfbc94c48e6b21669657daa6e"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">IRAD::Util::ComLineObject::_line</a></div><div class="ttdeci">std::string _line</div><div class="ttdoc">unformatted command line </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00078">ComLine.H:78</a></div></div>
+<div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a90ccfe0a837ff5795af9b8e860c21eda"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda">IRAD::Util::ComLineObject::_toks</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _toks</div><div class="ttdoc">commandline tokens </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00096">ComLine.H:96</a></div></div>
 <div class="ttc" id="namespaceIRAD_1_1Util_html_a9f9c5c71c884a0f174fc5c24f9373078"><div class="ttname"><a href="namespaceIRAD_1_1Util.html#a9f9c5c71c884a0f174fc5c24f9373078">IRAD::Util::stripdirs</a></div><div class="ttdeci">const std::string stripdirs(const std::string &amp;pname)</div><div class="ttdoc">Strip absolute path. </div><div class="ttdef"><b>Definition:</b> <a href="primitive__utilities_8H_source.html#l00461">primitive_utilities.H:461</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
 </div><!-- fragment -->
@@ -1826,21 +1829,21 @@ template&lt;typename NumType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00364">364</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
-<div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">if</span>(stinter == <span class="stringliteral">&quot;.true.&quot;</span> || stinter == <span class="stringliteral">&quot;.TRUE.&quot;</span>){</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;          t2 = 1;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;          <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">if</span>(stinter == <span class="stringliteral">&quot;.false.&quot;</span> || stinter == <span class="stringliteral">&quot;.FALSE.&quot;</span>){</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;          t2 = 0;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;          <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        }</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">if</span>(!stinter.empty()){</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;          std::istringstream Istr(stinter);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;          Istr &gt;&gt; t2;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      };</div>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00366">366</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">if</span>(stinter == <span class="stringliteral">&quot;.true.&quot;</span> || stinter == <span class="stringliteral">&quot;.TRUE.&quot;</span>){</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;          t2 = 1;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;          <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">if</span>(stinter == <span class="stringliteral">&quot;.false.&quot;</span> || stinter == <span class="stringliteral">&quot;.FALSE.&quot;</span>){</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;          t2 = 0;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;          <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">if</span>(!stinter.empty()){</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;          std::istringstream Istr(stinter);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;          Istr &gt;&gt; t2;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1877,12 +1880,12 @@ template&lt;typename NumType &gt; </div>
 </div><div class="memdoc">
 <p>Function is used to set the argument name for an option if the option can use an argument. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00204">204</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00206">206</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>, and <a class="el" href="ComLine_8C_source.html#l00284">GetShort()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(opstr)] = argname;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[<a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">GetShort</a>(opstr)] = argname;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a05eb03d8153fa8d2c5d151c38297d0d5"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a05eb03d8153fa8d2c5d151c38297d0d5">IRAD::Util::ComLineObject::GetShort</a></div><div class="ttdeci">char GetShort(const std::string &amp;l)</div><div class="ttdoc">Obtain the short one char option from the long word version. </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8C_source.html#l00284">ComLine.C:284</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_aee3a9b1a8a8c5affa5d1869848d2f1f4"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">IRAD::Util::ComLineObject::_argname</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _argname</div><div class="ttdoc">stores a name for arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00088">ComLine.H:88</a></div></div>
 </div><!-- fragment -->
@@ -1930,12 +1933,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Function is used to set the argument name for an option if the option can use an argument. </p>
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00214">214</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00216">216</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00088">_argname</a>.</p>
-<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[s] = argname;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      };</div>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">_argname</a>[s] = argname;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_aee3a9b1a8a8c5affa5d1869848d2f1f4"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#aee3a9b1a8a8c5affa5d1869848d2f1f4">IRAD::Util::ComLineObject::_argname</a></div><div class="ttdeci">std::map&lt; char, std::string &gt; _argname</div><div class="ttdoc">stores a name for arguments </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00088">ComLine.H:88</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1962,10 +1965,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00315">315</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00317">317</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00072">_description</a>.</p>
-<div class="fragment"><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">_description</a>.assign(desc); };</div>
+<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">_description</a>.assign(desc); };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a83bfe6fde73b4ee555a61f15d42deccb"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a83bfe6fde73b4ee555a61f15d42deccb">IRAD::Util::ComLineObject::_description</a></div><div class="ttdeci">std::string _description</div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00072">ComLine.H:72</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1992,10 +1995,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00319">319</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00321">321</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00074">_notes</a>.</p>
-<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac08b5db6cf7b23c4de9f6edf96309f77">_notes</a>.assign(notes); };</div>
+<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{ <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac08b5db6cf7b23c4de9f6edf96309f77">_notes</a>.assign(notes); };</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac08b5db6cf7b23c4de9f6edf96309f77"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac08b5db6cf7b23c4de9f6edf96309f77">IRAD::Util::ComLineObject::_notes</a></div><div class="ttdeci">std::string _notes</div><div class="ttdoc">Notes to be displayed at the end of LongUsage(). </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00074">ComLine.H:74</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2014,17 +2017,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00461">461</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
+<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00462">462</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
 
 <p>References <a class="el" href="ComLine_8H_source.html#l00078">_line</a>, and <a class="el" href="ComLine_8H_source.html#l00076">_program_name</a>.</p>
-<div class="fragment"><div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    {</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;      std::istringstream Istr(incl);</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      Istr &gt;&gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;      std::string token;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      Istr &gt;&gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;      <span class="keywordflow">while</span>(Istr &gt;&gt; token)</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        _line += (std::string(<span class="stringliteral">&quot; &quot;</span>)+token);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      std::istringstream Istr(incl);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;      Istr &gt;&gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">_program_name</a>;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      std::string token;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;      Istr &gt;&gt; <a class="code" href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">_line</a>;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      <span class="keywordflow">while</span>(Istr &gt;&gt; token)</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        _line += (std::string(<span class="stringliteral">&quot; &quot;</span>)+token);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_a767b24ddfbc94c48e6b21669657daa6e"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#a767b24ddfbc94c48e6b21669657daa6e">IRAD::Util::ComLineObject::_line</a></div><div class="ttdeci">std::string _line</div><div class="ttdoc">unformatted command line </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00078">ComLine.H:78</a></div></div>
 <div class="ttc" id="classIRAD_1_1Util_1_1ComLineObject_html_ac3803350192b188dc5e16e91b86a7509"><div class="ttname"><a href="classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509">IRAD::Util::ComLineObject::_program_name</a></div><div class="ttdeci">std::string _program_name</div><div class="ttdoc">the name of the program </div><div class="ttdef"><b>Definition:</b> <a href="ComLine_8H_source.html#l00076">ComLine.H:76</a></div></div>
 </div><!-- fragment -->
@@ -2127,8 +2130,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00480">480</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
-<div class="fragment"><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{<span class="keywordflow">return</span>;}</div>
+<p>Definition at line <a class="el" href="ComLine_8C_source.html#l00481">481</a> of file <a class="el" href="ComLine_8C_source.html">ComLine.C</a>.</p>
+<div class="fragment"><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;{<span class="keywordflow">return</span>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2332,7 +2335,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00094">94</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00194">AddArgHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00196">AddArgHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>.</p>
 
 </div>
 </div>
@@ -2356,7 +2359,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00088">88</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, <a class="el" href="ComLine_8H_source.html#l00204">SetArgName()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, <a class="el" href="ComLine_8H_source.html#l00206">SetArgName()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
 
 </div>
 </div>
@@ -2380,7 +2383,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00092">92</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00180">AddArgument()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00182">AddArgument()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
 
 </div>
 </div>
@@ -2406,7 +2409,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00072">72</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="RunTest_8H_source.html#l00024">IRAD::RTSComLine::Initialize()</a>, <a class="el" href="DiffDataFiles_8H_source.html#l00025">IRAD::DDFComLine::Initialize()</a>, <a class="el" href="QuickTest_8C_source.html#l00027">IRAD::TestComLine::Initialize()</a>, <a class="el" href="profane_8C_source.html#l00031">IRAD::Profiler::ProfaneComLine::Initialize()</a>, <a class="el" href="CheckResults_8H_source.html#l00060">IRAD::CheckResultsComLine::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, and <a class="el" href="ComLine_8H_source.html#l00315">SetDescription()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="RunTest_8H_source.html#l00024">IRAD::RTSComLine::Initialize()</a>, <a class="el" href="DiffDataFiles_8H_source.html#l00025">IRAD::DDFComLine::Initialize()</a>, <a class="el" href="QuickTest_8C_source.html#l00027">IRAD::TestComLine::Initialize()</a>, <a class="el" href="profane_8C_source.html#l00031">IRAD::Profiler::ProfaneComLine::Initialize()</a>, <a class="el" href="CheckResults_8H_source.html#l00060">IRAD::CheckResultsComLine::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, and <a class="el" href="ComLine_8H_source.html#l00317">SetDescription()</a>.</p>
 
 </div>
 </div>
@@ -2430,7 +2433,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00080">80</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00472">ErrorReport()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00473">ErrorReport()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>.</p>
 
 </div>
 </div>
@@ -2454,7 +2457,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00086">86</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00224">AddHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00245">GetHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8H_source.html#l00226">AddHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00247">GetHelp()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, and <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>.</p>
 
 </div>
 </div>
@@ -2478,7 +2481,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00078">78</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00131">GetRawComLine()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>, and <a class="el" href="ComLine_8C_source.html#l00461">SetRawComLine()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00133">GetRawComLine()</a>, <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>, and <a class="el" href="ComLine_8C_source.html#l00462">SetRawComLine()</a>.</p>
 
 </div>
 </div>
@@ -2502,7 +2505,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00082">82</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00311">GetArgs()</a>, and <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00313">GetArgs()</a>, and <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>.</p>
 
 </div>
 </div>
@@ -2526,7 +2529,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00074">74</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, and <a class="el" href="ComLine_8H_source.html#l00319">SetNotes()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, and <a class="el" href="ComLine_8H_source.html#l00321">SetNotes()</a>.</p>
 
 </div>
 </div>
@@ -2550,7 +2553,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00084">84</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00288">GetOption()</a>, and <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8H_source.html#l00290">GetOption()</a>, and <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>.</p>
 
 </div>
 </div>
@@ -2574,7 +2577,31 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00076">76</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00472">ErrorReport()</a>, <a class="el" href="ComLine_8H_source.html#l00131">GetRawComLine()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8H_source.html#l00307">ProgramName()</a>, <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>, <a class="el" href="ComLine_8C_source.html#l00461">SetRawComLine()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00473">ErrorReport()</a>, <a class="el" href="ComLine_8H_source.html#l00133">GetRawComLine()</a>, <a class="el" href="ComLine_8H_source.html#l00309">ProgramName()</a>, <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>, <a class="el" href="ComLine_8C_source.html#l00462">SetRawComLine()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a90ccfe0a837ff5795af9b8e860c21eda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; IRAD::Util::ComLineObject::_toks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ComLine_8H_source.html#l00096">96</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
+
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00316">Record()</a>.</p>
 
 </div>
 </div>
@@ -2598,7 +2625,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="ComLine_8H_source.html#l00090">90</a> of file <a class="el" href="ComLine_8H_source.html">ComLine.H</a>.</p>
 
-<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00232">GetOpStringByType()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, <a class="el" href="ComLine_8C_source.html#l00329">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
+<p>Referenced by <a class="el" href="ComLine_8C_source.html#l00295">AddOption()</a>, <a class="el" href="ComLine_8C_source.html#l00128">Copy()</a>, <a class="el" href="ComLine_8C_source.html#l00232">GetOpStringByType()</a>, <a class="el" href="ComLine_8C_source.html#l00188">LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00086">IRAD::Util::operator&lt;&lt;()</a>, <a class="el" href="ComLine_8C_source.html#l00014">IRAD::Util::operator&gt;&gt;()</a>, <a class="el" href="ComLine_8C_source.html#l00330">ProcessOptions()</a>, and <a class="el" href="ComLine_8C_source.html#l00244">ShortUsage()</a>.</p>
 
 </div>
 </div>
@@ -2612,7 +2639,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceIRAD.html">IRAD</a></li><li class="navelem"><a class="el" href="namespaceIRAD_1_1Util.html">Util</a></li><li class="navelem"><a class="el" href="classIRAD_1_1Util_1_1ComLineObject.html">ComLineObject</a></li>
-    <li class="footer">Generated on Sat Jan 2 2016 02:00:26 for IRAD by
+    <li class="footer">Generated on Sun Jan 3 2016 02:00:34 for IRAD by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

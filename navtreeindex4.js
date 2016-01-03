@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"primitive__utilities_8H.html#a8a03687932241cbc73cf558b9b38d3d6":[3,0,18,14],
 "primitive__utilities_8H.html#a9b5578e7663679212e55850f1f05dce7":[3,0,18,26],
 "primitive__utilities_8H.html#a9ccde863ffd2f8e7d35b7b852815b771":[3,0,18,1],
 "primitive__utilities_8H.html#a9f9c5c71c884a0f174fc5c24f9373078":[3,0,18,24],

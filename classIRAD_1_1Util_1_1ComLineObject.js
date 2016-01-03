@@ -50,5 +50,6 @@ var classIRAD_1_1Util_1_1ComLineObject =
     [ "_notes", "classIRAD_1_1Util_1_1ComLineObject.html#ac08b5db6cf7b23c4de9f6edf96309f77", null ],
     [ "_options", "classIRAD_1_1Util_1_1ComLineObject.html#a666cd21df8e5141743c96b28b7363bdf", null ],
     [ "_program_name", "classIRAD_1_1Util_1_1ComLineObject.html#ac3803350192b188dc5e16e91b86a7509", null ],
+    [ "_toks", "classIRAD_1_1Util_1_1ComLineObject.html#a90ccfe0a837ff5795af9b8e860c21eda", null ],
     [ "_type", "classIRAD_1_1Util_1_1ComLineObject.html#a3992a7c3d279e0b36ce0100d93701919", null ]
 ];
