@@ -319,6 +319,41 @@ namespace IRAD {
       open_event_list.pop_front();
       return(0);
     };
+    
+    /// Close all preparing for some emergency exit probably.
+    int ProfilerObj::FunctionExitAll(){
+      std::list<Event>::iterator ei = open_event_list.begin();
+      while(ei != open_event_list.end()){
+        unsigned int id = ei->id();        
+#ifdef WITH_HPM_TOOLKIT
+        hpmStop((int)id);
+#endif
+        double t = Time() - time0;
+        double inclusive = t - ei->timestamp();
+        double exclusive = inclusive - ei->exclusive();
+        //  assert(inclusive > 0 && exclusive > 0);
+        ei->inclusive(inclusive);
+        ei->exclusive(exclusive);
+#ifdef WITH_PAPI
+        // Read HWC
+        // ei->hwc_vals = hwc_vals - ei->hwc_vals;
+        // ei->hwc_tree = ei->hwc_vals - ei->hwc_tree;
+        // hwc_vals = ei->hwc_vals;
+#endif
+        event_list.push_back(*ei);
+        ei++;
+        if(ei != open_event_list.end()){
+          t = ei->exclusive();
+          ei->exclusive(t + inclusive);
+        }
+        open_event_list.pop_front();
+      }
+#ifdef WITH_PAPI
+      // ei->hwc_tree += hwc_vals;
+#endif
+      return(0);
+    };
+
     /// dump closed events to Ostr, clear mem
     int ProfilerObj::Dump(std::ostream &Ostr){return(0);};
     int ProfilerObj::ReadConfig(const std::string &cfname)

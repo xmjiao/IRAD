@@ -292,6 +292,7 @@ namespace IRAD {
       int FunctionEntry(int id){return 0;};
       int FunctionExit(const std::string &name){return 0;};
       int FunctionExit(int id){return 0;};
+      int FunctionExitAll(){return 0;};
       int Finalize(){return 0;};
       int Dump(std::ostream &Ostr){return 0;}; 
       bool Ready() {return true;};
@@ -381,6 +382,14 @@ namespace IRAD {
       /// added to the completed Events list.
       ///
       int FunctionExit(int id);
+
+      ///
+      /// \brief Force all open profiling Events to close (emergency)
+      ///
+      /// Programs call this when they want to exit unexpectedly,
+      /// for example.
+      ///
+      int FunctionExitAll();
 
       ///
       /// \brief dumps closed events, clears memory

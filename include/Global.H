@@ -268,6 +268,12 @@ namespace IRAD {
 	  *_DebugStream << "GlobalDebugging:FunctionExit(" << FName() + stackentry << ")" << std::endl;
       };
 
+      /// FunctionExitAll exits all from the Profiler only
+      virtual void FunctionExitAll(){
+	if(_profiling_enabled && _Profiler)
+	  _Profiler->FunctionExitAll();
+      };
+
       /// Pushes an error onto the error stack
       virtual void Error(const ErrorType &error){
 	_Errors.push_front(error);
