@@ -4,19 +4,23 @@
 /// \ingroup irad_group
 ///
 #include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+
+#ifndef _WIN32
+
+  #include <sys/socket.h>
+  #include <netinet/in.h>
+  #include <arpa/inet.h>
+  #include <netdb.h>
+
+#endif
+
 #include <errno.h>
 #include <fcntl.h>
-#include <netdb.h>
 #include <unistd.h>
-
 #include <csignal>
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -72,6 +76,8 @@ namespace IRAD {
 	  }
 	  return(0);
 	};
+#ifndef _WIN32
+	 
 	int Accept()
 	{
 	  struct sockaddr_in client_addy;
@@ -88,30 +94,7 @@ namespace IRAD {
 	  }
 	  return(new_descriptor);
 	};
-	int CloseAll()
-	{
-	  std::vector<int>::iterator fdi = _client_descriptors.begin();
-	  while(fdi != _client_descriptors.end())
-	    close(*fdi++);
-	  return(0);
-	};
-	~Server(){ CloseAll(); };
-      };
-    
-      class Client
-      {
-      private:
-	int _descriptor;
-	struct sockaddr_in _server_addy;
-      public:
-	Client() : _descriptor(-1)
-	{
-	  std::memset(&_server_addy,0,sizeof(struct sockaddr_in));
-	};
-	int &Descriptor() { return(_descriptor); };
-	int Descriptor() const { return(_descriptor); };
-	struct sockaddr_in &ServerAddress() { return(_server_addy); };
-	const struct sockaddr_in ServerAddresss() const { return(_server_addy); };
+	
 	int Connect(const std::string &server_address,int port = 0)
 	{
 	  if(port <= 0)
@@ -140,6 +123,32 @@ namespace IRAD {
 	  }
 	  return(0);
 	};
+		
+#endif
+	int CloseAll()
+	{
+	  std::vector<int>::iterator fdi = _client_descriptors.begin();
+	  while(fdi != _client_descriptors.end())
+	    close(*fdi++);
+	  return(0);
+	};
+	~Server(){ CloseAll(); };
+      };
+    
+      class Client
+      {
+      private:
+	int _descriptor;
+	struct sockaddr_in _server_addy;
+      public:
+	Client() : _descriptor(-1)
+	{
+	  std::memset(&_server_addy,0,sizeof(struct sockaddr_in));
+	};
+	int &Descriptor() { return(_descriptor); };
+	int Descriptor() const { return(_descriptor); };
+	struct sockaddr_in &ServerAddress() { return(_server_addy); };
+	const struct sockaddr_in ServerAddresss() const { return(_server_addy); };
 	int Close() { if(_descriptor > 0) close(_descriptor); return(0);};
 	~Client() { Close(); };
       };

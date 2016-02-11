@@ -6,6 +6,19 @@
 #ifndef _UNIX_UTIL_H_
 #define _UNIX_UTIL_H_
 
+//MDB Windows Port
+
+#ifdef _WIN32
+    #include <io.h>
+    #include <WinSock2.h> //for gethostname
+    #include <direct.h>
+    #include <dirent.h>
+#else
+    #include <unistd.h>
+#endif
+
+
+
 #include <sys/types.h>
 #include <dirent.h>
 #include <sys/stat.h>
@@ -27,19 +40,23 @@ namespace IRAD {
   namespace Sys {
     std::string LogTime();
     void TokenizePath(std::vector<std::string> rv,const std::string &path);
+#ifndef _WIN32
     std::string TempFileName(const std::string &stub);
     int OpenTemp(std::string &stub);
-    const std::string Hostname(bool longname = false);
+    const std::string Hostname(bool longname = false)
+    int SymLink(const std::string &source,const std::string &target);
+    const std::string ResolveLink(const std::string &path);
+#endif
     const std::string StripDirs(const std::string &);
     const std::string CWD();
-    int SymLink(const std::string &source,const std::string &target);
+
     void SafeRemove(const std::string &fname,const std::string &ext);
     int ChDir(const std::string &path);
     bool FILEEXISTS(const std::string &fname);
     bool ISDIR(const std::string &fname);
     bool ISLINK(const std::string &fname);
     int CreateDirectory(const std::string &fname);
-    const std::string ResolveLink(const std::string &path);
+
     int Remove(const std::string &fname);
     int Rename(const std::string &source_file,const std::string &target_file);
     class Directory : public std::vector<std::string>
@@ -62,10 +79,14 @@ namespace IRAD {
     {
     public:
       Environment();
+#ifndef _WIN32
       int SetEnv(const std::string &,const std::string &,bool);
       void UnSetEnv(const std::string &);
+#endif
 #ifndef DARWIN
+ #ifndef _WIN32
       int ClearEnv();
+ #endif
 #endif
       const std::string GetEnv(const std::string &) const;
       std::string &GetEnv(const std::string &);

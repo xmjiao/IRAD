@@ -8,6 +8,10 @@
 
 #include "UnixUtils.H"
 
+/// WK trying stuff
+//#include <unistd.h>
+
+
 extern char **environ;
 
 namespace IRAD {
@@ -17,17 +21,125 @@ namespace IRAD {
     {
       return(rename(source_file.c_str(),target_file.c_str()));
     }
-    int SymLink(const std::string &source,const std::string &target)
+#ifndef _WIN32
+   
+	int SymLink(const std::string &source,const std::string &target)
     {
       return(symlink(source.c_str(),target.c_str()));
     }
 
-    const std::string Hostname(bool longname)
+ const std::string Hostname(bool longname)
     {
       char buf[64];
       gethostname(buf,64);
       return(std::string(buf));
     }
+
+
+   int
+    Environment::SetEnv(const std::string &var,const std::string &val,bool ow)
+    {
+      int retVal = setenv(var.c_str(),val.c_str(),(int)ow);
+      this->init();
+      return(retVal);
+    }
+
+    void
+    Environment::UnSetEnv(const std::string &var)
+    {
+      unsetenv(var.c_str());
+      this->init();
+    }
+
+#ifndef DARWIN
+
+ int
+    Environment::ClearEnv()
+    {
+      clearenv();
+      this->init();
+      return(1);
+    }
+
+#endif
+
+    std::string
+    TempFileName(const std::string &stub)
+    {
+      int fd;
+      std::string tstub(stub);
+      tstub += "XXXXXX";
+	  char *name = new char[tstub.length() + 1];
+	  std::strcpy(name, tstub.c_str());
+	  name[tstub.length()] = '\0';
+#ifdef _WIN32
+	  //Windows version of mkstemp does not open the file, it just creates the unique filename, 
+	  //thus this can be simpler than the unix version since no file is created, but we 
+	  //just want the filename anyway...
+	  int err = _mktemp_s(name, tstub.length());
+	  if (err) return("ERROR OPENING TEMP FILE");
+	 
+#else
+	  fd = mkstemp(name);
+	  //should really check for error here, although shouldn't fail unless disk is full or something...
+	  close(fd);
+	  // Get rid of the file - we just
+	  // want the name at this point.
+	  IRAD::Sys::Remove(tstub);
+#endif
+	  tstub.assign(name);
+	  delete[] name;
+	  return (tstub);
+    }
+
+ int OpenTemp(std::string &stub)
+    {
+      int fd;
+      std::string tstub(stub);
+      tstub += "XXXXXX";
+      char *name = new char [tstub.length() + 1];
+      std::strcpy(name,tstub.c_str());
+      name[tstub.length()] = '\0';
+#ifdef _WIN32
+	  HANDLE fd = INVALID_HANDLE_VALUE;
+	  fd = CreateFile(name,   // file name 
+		  GENERIC_WRITE,         // open for writing 
+		  0,                     // do not share 
+		  NULL,                  // default security 
+		  CREATE_ALWAYS,         // create the new file always 
+		  FILE_ATTRIBUTE_NORMAL, // normal file 
+		  NULL);                 // no template 
+	  if (fd == INVALID_HANDLE_VALUE)
+	  {
+		  return (tstub); //return the XXXXX form if failed...
+	  }
+#else
+	  fd = mkstemp(name);
+#endif
+      stub = name;
+      delete [] name;
+      return(fd);
+    }
+
+   const std::string ResolveLink(const std::string &path)
+    {
+      std::string retVal;
+      char buf[1024];
+      size_t s = readlink(path.c_str(),buf,1024);
+      if(!(s <= 0)){
+	buf[s] = '\0';
+	retVal.assign(buf);
+      }
+      std::string::size_type x = retVal.find_last_of("/");
+      if(x != std::string::npos)
+	retVal.erase(x);
+      return (retVal);
+    }
+
+#endif
+
+
+
     int Remove(const std::string &fname)
     {
       std::cout << fname << std::endl;
@@ -40,7 +152,12 @@ namespace IRAD {
           }
         }
         std::cout << "removing directory" << std::endl;
-        return(rmdir(fname.c_str()));
+		#ifdef _WIN32
+		    return(_rmdir(fname.c_str()));
+		#else
+		    return(rmdir(fname.c_str()));
+		#endif
+        
       }
       else{
         std::cout << "removing file" << std::endl;
@@ -79,7 +196,12 @@ namespace IRAD {
     bool FILEEXISTS(const std::string &fname)
     {
       struct stat fstat;
-      if(lstat(fname.c_str(),&fstat))
+#ifdef _WIN32
+	  //Windows stat supposedly works OK with links, and lstat is not needed (and doesn't exist)
+	  if (stat(fname.c_str(), &fstat))
+#else
+	  if (lstat(fname.c_str(), &fstat))
+#endif
 	return false;
       return true;
     }
@@ -97,7 +219,13 @@ namespace IRAD {
     bool ISLINK(const std::string &fname)
     {
       struct stat fstat;
-      if(lstat(fname.c_str(),&fstat))
+#ifdef _WIN32
+	  //Windows stat supposedly works OK with links, and lstat is not needed (and doesn't exist)
+	  if (stat(fname.c_str(), &fstat))
+#else
+	  if (lstat(fname.c_str(), &fstat))
+#endif
+      
 	return false;
       if(S_ISLNK(fstat.st_mode))
 	return true;
@@ -106,22 +234,14 @@ namespace IRAD {
 
     int CreateDirectory(const std::string &fname)
     {
-      return(mkdir(fname.c_str(),S_IRGRP | S_IXGRP  | S_IRWXU));
-    }
-
-    const std::string ResolveLink(const std::string &path)
-    {
-      std::string retVal;
-      char buf[1024];
-      size_t s = readlink(path.c_str(),buf,1024);
-      if(!(s <= 0)){
-	buf[s] = '\0';
-	retVal.assign(buf);
-      }
-      std::string::size_type x = retVal.find_last_of("/");
-      if(x != std::string::npos)
-	retVal.erase(x);
-      return (retVal);
+#ifdef _WIN32
+		//Windows mkdir does not take permissions parameters
+		return(mkdir(fname.c_str()));
+#else
+		return(mkdir(fname.c_str(), S_IRGRP | S_IXGRP | S_IRWXU));
+#endif
+//      
+	  
     }
 
 
@@ -199,40 +319,6 @@ namespace IRAD {
       return(pname.substr(pname.find_last_of("/")+1));
     }
 
-    std::string
-    TempFileName(const std::string &stub)
-    {
-      int fd;
-      std::string tstub(stub);
-      tstub += "XXXXXX";
-      char *name = new char [tstub.length() + 1];
-      std::strcpy(name,tstub.c_str());
-      name[tstub.length()] = '\0';
-      fd = mkstemp(name);
-      tstub.assign(name);
-      //      if(!fd)
-      //	stub = name;
-      delete [] name;
-      close(fd);
-      // Get rid of the file - we just
-      // want the name at this point.
-      IRAD::Sys::Remove(tstub);
-      return (tstub);
-    }
-
-    int OpenTemp(std::string &stub)
-    {
-      int fd;
-      std::string tstub(stub);
-      tstub += "XXXXXX";
-      char *name = new char [tstub.length() + 1];
-      std::strcpy(name,tstub.c_str());
-      name[tstub.length()] = '\0';
-      fd = mkstemp(name);
-      stub = name;
-      delete [] name;
-      return(fd);
-    }
     // Tokenize Path
     // Takes an input path and makes string tokens of each
     // directory and the final argument
@@ -271,30 +357,7 @@ namespace IRAD {
       }
     }
 
-    int
-    Environment::SetEnv(const std::string &var,const std::string &val,bool ow)
-    {
-      int retVal = setenv(var.c_str(),val.c_str(),(int)ow);
-      this->init();
-      return(retVal);
-    }
 
-    void
-    Environment::UnSetEnv(const std::string &var)
-    {
-      unsetenv(var.c_str());
-      this->init();
-    }
-
-#ifndef DARWIN
-    int
-    Environment::ClearEnv()
-    {
-      clearenv();
-      this->init();
-      return(1);
-    }
-#endif
 
     const std::string
     Environment::GetEnv(const std::string &var) const

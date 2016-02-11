@@ -42,6 +42,7 @@ namespace IRAD
   /// handle all of the generation of help messages, command line 
   /// argument validation, and encapsulation.
   ///
+  //class IRAD_EXPORT CheckResultsComLine : public IRAD::Util::ComLineObject
   class CheckResultsComLine : public IRAD::Util::ComLineObject
   {
   public:
