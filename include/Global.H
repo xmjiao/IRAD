@@ -268,12 +268,6 @@ namespace IRAD {
 	  *_DebugStream << "GlobalDebugging:FunctionExit(" << FName() + stackentry << ")" << std::endl;
       };
 
-      /// FunctionExitAll exits all from the Profiler only
-      virtual void FunctionExitAll(){
-	if(_profiling_enabled && _Profiler)
-	  _Profiler->FunctionExitAll();
-      };
-
       /// Pushes an error onto the error stack
       virtual void Error(const ErrorType &error){
 	_Errors.push_front(error);
@@ -403,14 +397,19 @@ namespace IRAD {
 	_DebugStream = _DebugStreamSave;
       };
 
-      virtual int StdOut(const std::string &outstr,unsigned char inlev = 1)
+      virtual int StdOut(const std::string &outstr,unsigned char inlev = 0,bool stack = false)
       {
-	if(_OutStream && _verb_level >= inlev){
+        if(_OutStream && _verb_level >= inlev){
 	  std::string line;
 	  std::istringstream Istr(outstr);
 	  while(std::getline(Istr,line)){
-	    *_OutStream << (Name().empty() ? "" : std::string(Name()+std::string(": "))) 
-			<< line;
+            if(stack){
+              *_OutStream << _Stack.front() << ": " << line;
+            }
+            else{
+	      *_OutStream << (Name().empty() ? "" : std::string(Name()+std::string(": "))) 
+	     		  << line;
+            }
 	    *_OutStream << (Istr.good() ? "\n" : "");
 	  }
 	}
