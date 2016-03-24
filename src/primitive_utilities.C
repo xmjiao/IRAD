@@ -1,4 +1,5 @@
 ///
+///
 /// @file
 /// @ingroup irad_group
 /// @brief Primitive utils implementation
