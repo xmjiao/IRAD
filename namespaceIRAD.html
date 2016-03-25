@@ -209,7 +209,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="CheckResults_8C_source.html#l00008">8</a> of file <a class="el" href="CheckResults_8C_source.html">CheckResults.C</a>.</p>
 
-<p>References <a class="el" href="ComLine_8H_source.html#l00290">IRAD::Util::ComLineObject::GetOption()</a>, <a class="el" href="CheckResults_8H_source.html#l00060">IRAD::CheckResultsComLine::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00188">IRAD::Util::ComLineObject::LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00330">IRAD::Util::ComLineObject::ProcessOptions()</a>, and <a class="el" href="ComLine_8H_source.html#l00334">IRAD::Util::ComLineObject::ProcessRange()</a>.</p>
+<p>References <a class="el" href="ComLine_8H_source.html#l00290">IRAD::Util::ComLineObject::GetOption()</a>, <a class="el" href="CheckResults_8H_source.html#l00061">IRAD::CheckResultsComLine::Initialize()</a>, <a class="el" href="ComLine_8C_source.html#l00188">IRAD::Util::ComLineObject::LongUsage()</a>, <a class="el" href="ComLine_8C_source.html#l00330">IRAD::Util::ComLineObject::ProcessOptions()</a>, and <a class="el" href="ComLine_8H_source.html#l00334">IRAD::Util::ComLineObject::ProcessRange()</a>.</p>
 
 <p>Referenced by <a class="el" href="CheckResults_8C_source.html#l00064">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
@@ -1006,58 +1006,58 @@ Here is the caller graph for this function:</div>
      NameOfTest3 = 1 # also passed
 </pre><p>If the test passed, this utility returns a 0, otherwise it returns 1. </p>
 
-<p>Definition at line <a class="el" href="TestResults_8C_source.html#l00015">15</a> of file <a class="el" href="TestResults_8C_source.html">TestResults.C</a>.</p>
+<p>Definition at line <a class="el" href="TestResults_8C_source.html#l00016">16</a> of file <a class="el" href="TestResults_8C_source.html">TestResults.C</a>.</p>
 
-<p>Referenced by <a class="el" href="TestResults_8C_source.html#l00067">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> verbose = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::istream *Ins = &amp;std::cin;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::ifstream Inf;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span>(argc &lt; 2){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Usage:\n\n&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; [name of test] &lt;testing results file&gt;&quot;</span> </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keywordflow">return</span>(1);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string name_of_test(argv[1]);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::string name_of_results_file(argv[2]);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>(argc &gt; 2){</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      Inf.open(argv[2]);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">if</span>(!Inf){</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Error: Could not open indicated results file, &quot;</span> </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                  &lt;&lt; argv[2] &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span>(1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      Ins = &amp;Inf;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>(argc &gt; 3)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      verbose = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::string line;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span>(verbose)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Searching for &quot;</span> &lt;&lt; name_of_test &lt;&lt; <span class="stringliteral">&quot; in &quot;</span> </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                &lt;&lt; name_of_results_file &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span>(std::getline(*Ins,line)){</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      std::string::size_type x = line.find(<span class="stringliteral">&quot;=&quot;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">if</span>(x != std::string::npos){</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::string testname(line.substr(0,x));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string testresult(line.substr(x+1));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        testname = testname.substr(0,name_of_test.size());</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(testname == name_of_test){</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keywordflow">if</span>(verbose)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Found &quot;</span> &lt;&lt; name_of_test &lt;&lt; <span class="stringliteral">&quot;, reading result from &quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                      &lt;&lt; testresult &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          std::istringstream Istr(testresult);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          <span class="keywordtype">int</span> result = -1;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          Istr &gt;&gt; result;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keywordflow">if</span>(result == 1)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span>(0);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span>(1);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span>(1);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<p>Referenced by <a class="el" href="TestResults_8C_source.html#l00068">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> verbose = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::istream *Ins = &amp;std::cin;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::ifstream Inf;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(argc &lt; 2){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Usage:\n\n&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; [name of test] &lt;testing results file&gt;&quot;</span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordflow">return</span>(1);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::string name_of_test(argv[1]);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::string name_of_results_file(argv[2]);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(argc &gt; 2){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      Inf.open(argv[2]);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordflow">if</span>(!Inf){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Error: Could not open indicated results file, &quot;</span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                  &lt;&lt; argv[2] &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span>(1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      Ins = &amp;Inf;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>(argc &gt; 3)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      verbose = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string line;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(verbose)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Searching for &quot;</span> &lt;&lt; name_of_test &lt;&lt; <span class="stringliteral">&quot; in &quot;</span> </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                &lt;&lt; name_of_results_file &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">while</span>(std::getline(*Ins,line)){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      std::string::size_type x = line.find(<span class="stringliteral">&quot;=&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">if</span>(x != std::string::npos){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string testname(line.substr(0,x));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string testresult(line.substr(x+1));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        testname = testname.substr(0,name_of_test.size());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span>(testname == name_of_test){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keywordflow">if</span>(verbose)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Found &quot;</span> &lt;&lt; name_of_test &lt;&lt; <span class="stringliteral">&quot;, reading result from &quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      &lt;&lt; testresult &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          std::istringstream Istr(testresult);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          <span class="keywordtype">int</span> result = -1;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          Istr &gt;&gt; result;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <span class="keywordflow">if</span>(result == 1)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span>(0);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span>(1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span>(1);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1234,7 +1234,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceIRAD.html">IRAD</a></li>
-    <li class="footer">Generated on Thu Mar 24 2016 02:00:44 for IRAD by
+    <li class="footer">Generated on Fri Mar 25 2016 02:00:49 for IRAD by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
