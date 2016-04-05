@@ -34,12 +34,22 @@ namespace IRAD
       AddHelp("verblevel","Set the verbosity level. (default = 1)");
       AddOption('o',"output",2,"filename");
       AddHelp("output","Set the output file to <filename>. (default = stdout)");
-      AddOption('t',"tolerance",1,"tolerance");
+      AddOption('t',"tolerance",2,"tolerance");
       Ostr << "Set the numerical tolerance for comparing numbers to <tolerance>."
-           << "\n\t\t(The default for the tolerance is 1.0e-12.)"
+//           << "\n\t\t(The default for the tolerance is 1.0e-12.)"
            << "\n\t\t(The default behavior without -t is to compare numbers as strings.)"
            << "\n\t\t(This flag will automatically force the -b flag to be used.)";
       AddHelp("tolerance",Ostr.str());
+      Ostr.str("");
+      AddOption('p',"percent",2,"percent");
+      Ostr << "Set the numerical tolerance for comparing numbers to be calculated as"
+           << "\n\t\ta percent difference. Numbers will be listed as different if the"
+           << "\n\t\tdifference between two numbers is greater than <percent> percent"
+           << "\n\t\tof the number from the first file. This is useful for comparing"
+           << "\n\t\tvery large numbers." // The default percent used is 1.0."
+           << "\n\t\tNOTE: Using the '-n' flag will force the tolerance to be used,"
+           << "\n\t\toverwriting the use of percent.";
+      AddHelp("percent",Ostr.str());
       AddOption('n',"numbers");
       Ostr.str("");
       Ostr << "Only compare the numbers in the two files."

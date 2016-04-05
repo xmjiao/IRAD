@@ -61,6 +61,7 @@ namespace IRAD
     std::vector<std::string> FileNames = comline.GetArgs();
     std::string sverb(comline.GetOption("verblevel"));
     std::string sTolerance(comline.GetOption("tolerance"));
+    std::string sPercent(comline.GetOption("percent"));
     std::string sNoBlank(comline.GetOption("blank"));
 
     int retval = 0;
@@ -102,6 +103,17 @@ namespace IRAD
     if(!sNoBlank.empty())
       noBlank = true;
 
+    // If there is a percent set the bool and convert the percent to a double
+    bool usePer = false;
+    double percent = 1.0;
+    if(!sPercent.empty()){
+      usePer = true;
+      if(sPercent != ".true."){
+        std::istringstream Istr(sPercent);
+        Istr >> percent;
+      }
+    }
+
     if(verblevel > 2){
       std::cout << "IRAD::DiffDataFiles> Starting up with the following environment:" << std::endl
                 << "IRAD::DiffDataFiles> FileName1 = " << FileNames[0] << std::endl
@@ -113,6 +125,10 @@ namespace IRAD
                 << "IRAD::DiffDataFiles> Tolerance = "; 
       if(useTol)
         std::cout << tolerance;
+      std::cout << std::endl
+                << "IRAD::DiffDataFiles> Percent = ";
+      if(usePer)
+        std::cout << percent;
       std::cout << std::endl; 
     }    
 
@@ -159,7 +175,7 @@ namespace IRAD
       if(!InFile2.eof())
         std::getline(InFile2,line2);
       //compare line by line as strings(including white space)
-      if(!noBlank && !useTol){
+      if(!noBlank && !useTol && !usePer){
         if(line1 != line2){
             ssPrint1 << line1;
             ssPrint2 << line2;
@@ -174,7 +190,7 @@ namespace IRAD
         while(ss1 >> string1){
           ss2 >> string2;
           if(string1 != string2){
-            if(useTol){
+            if(useTol || usePer){
               if(!isNumber(string1) || !isNumber(string2)){
                 if(!numbers)
                   numDiff = true;
@@ -188,15 +204,23 @@ namespace IRAD
                 convert.str("");
                 convert << string2;
                 convert >> val2;
-                if(fabs(val1 - val2) > tolerance)
+                if(fabs(val1 - val2) > tolerance && useTol)
                   numDiff = true;
+                else if(usePer){
+                  double diff = 0.0;
+                  diff = fabs(val1 - val2);
+                  diff = fabs(diff/val1);
+                  if(diff > percent){
+                    numDiff = true;
+                  }
+                }
                 else{
                   ssPrint1 << std::scientific << std::setw(20) << val1 << " ";
                   ssPrint2 << std::scientific << std::setw(20) << val2 << " ";
                 }
               }
             }
-            if(!useTol || numDiff){
+            if((!useTol && !usePer) || numDiff){
               lineDiff = true;
               retval = 1;
               printString1 += '[' + string1 + "]";
