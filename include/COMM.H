@@ -352,21 +352,55 @@ namespace IRAD {
 	  nrecv += nsend_all[i];
 	std::vector<int> allsizes(_nproc,0);
 	std::vector<int> disps(_nproc,0);
-	if(_rank == root){
+        // MS : Debug: the following lines should be executed by all of the
+        //      ranks, therefore if is not needed. Another problem is the
+        //      datasize. MPI_CHAR datasize is 8, so 8-byte datatypes can be
+        //      gathered from the client code by this method reliably.
+	//if(_rank == root){
 	  recvvec.resize(nrecv);
 	  for(int i = 0; i < _nproc;i++){
 	    allsizes[i] = nsend_all[i] * datasize;
 	    if(i > 0)
 	      disps[i] = disps[i-1]+allsizes[i-1];
 	  }
-	}
+	//}
+
 	_rc = MPI_Gatherv((void *)(&(sendvec[0])),allsizes[_rank],MPI_CHAR,
 			  (void *)(&(recvvec[0])),&allsizes[0],&disps[0],MPI_CHAR,
 			  root,_comm);
-	assert(_rc == 0);
+        assert(_rc == 0);
 	return(_rc);
       };
 
+      // MS: Scatterv implementation for IRAD COMM object
+      template<typename DataType>
+      int Scatterv(std::vector<DataType> &sendvec, std::vector<int> &sendcounts,
+                   std::vector<DataType> &recvvec, int root = 0)
+      {
+	int datasize = sizeof(DataType);
+        if (sendcounts.size() == 0)
+           sendcounts.resize(_nproc);
+        // sending number of nrecv to each process
+        this->BroadCast(sendcounts, root);
+        // initializing recvec
+        if (recvvec.size() == 0)
+           recvvec.resize(sendcounts[_rank]);
+        // calculating displs
+	std::vector<int> allsizes(_nproc,0);
+	std::vector<int> disps(_nproc,0);        
+	for(int i = 0; i < _nproc;i++){
+	    allsizes[i] = sendcounts[i] * datasize;
+	    if(i > 0)
+	      disps[i] = disps[i-1]+allsizes[i-1];
+	}
+        // scattering data
+	_rc = MPI_Scatterv((void *)(&(sendvec[0])), &allsizes[0], &disps[0], MPI_CHAR,
+			  (void *)(&(recvvec[0])), allsizes[_rank], MPI_CHAR,
+			  root, _comm);
+        assert(_rc == 0);
+	return(_rc);
+      };
+      // MS: End
 
       // Native Mobile Object support below
       // ------------------------------------
