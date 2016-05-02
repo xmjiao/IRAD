@@ -5,6 +5,7 @@ var searchData=
   ['scalabilitysummary',['ScalabilitySummary',['../classIRAD_1_1Profiler_1_1ProfilerObj.html#a942a61e06475d052bd7014c7c59f65aa',1,'IRAD::Profiler::ProfilerObj']]],
   ['scalamap',['ScalaMap',['../namespaceIRAD_1_1Profiler.html#adbe2690a58f67e865b9c69c9c444359b',1,'IRAD::Profiler']]],
   ['scalastatmap',['ScalaStatMap',['../namespaceIRAD_1_1Profiler.html#aa903ab786f58cbcdb0367279232e0014',1,'IRAD::Profiler']]],
+  ['scatterv',['Scatterv',['../classIRAD_1_1Comm_1_1CommunicatorObject.html#a785238e2ad394c4b3cb0109a2879aead',1,'IRAD::Comm::CommunicatorObject']]],
   ['sclone',['sclone',['../classIRAD_1_1TestProgram.html#ae060de36704bf6fb0e2a9713b8cbd373',1,'IRAD::TestProgram']]],
   ['section',['Section',['../classIRAD_1_1Util_1_1ConfigurationObject.html#a1c0d6e2ed3127a3eaa9eb860cd72e736',1,'IRAD::Util::ConfigurationObject']]],
   ['sectionindex',['SectionIndex',['../classIRAD_1_1Util_1_1ConfigurationObject.html#a1a30b7530188cdb9a3ced914bda0f1a3',1,'IRAD::Util::ConfigurationObject']]],

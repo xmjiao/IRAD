@@ -2,6 +2,7 @@ var searchData=
 [
   ['saferemove',['SafeRemove',['../namespaceIRAD_1_1Sys.html#aaac721a363d4c8fa6f1cddf511f68611',1,'IRAD::Sys']]],
   ['scalabilitysummary',['ScalabilitySummary',['../classIRAD_1_1Profiler_1_1ProfilerObj.html#a942a61e06475d052bd7014c7c59f65aa',1,'IRAD::Profiler::ProfilerObj']]],
+  ['scatterv',['Scatterv',['../classIRAD_1_1Comm_1_1CommunicatorObject.html#a785238e2ad394c4b3cb0109a2879aead',1,'IRAD::Comm::CommunicatorObject']]],
   ['section',['Section',['../classIRAD_1_1Util_1_1ConfigurationObject.html#a1c0d6e2ed3127a3eaa9eb860cd72e736',1,'IRAD::Util::ConfigurationObject']]],
   ['sectionindex',['SectionIndex',['../classIRAD_1_1Util_1_1ConfigurationObject.html#a1a30b7530188cdb9a3ced914bda0f1a3',1,'IRAD::Util::ConfigurationObject']]],
   ['select',['Select',['../classIRAD_1_1Sys_1_1FDSetMan.html#a8bb27394bdcdb3e1774eb5775ffc0245',1,'IRAD::Sys::FDSetMan']]],

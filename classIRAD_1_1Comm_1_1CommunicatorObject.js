@@ -56,6 +56,7 @@ var classIRAD_1_1Comm_1_1CommunicatorObject =
     [ "Reduce", "classIRAD_1_1Comm_1_1CommunicatorObject.html#a5454a3b2cedb65a2e5298183ba8a1729", null ],
     [ "ResolveDataType", "classIRAD_1_1Comm_1_1CommunicatorObject.html#a4639e078d0a9a27138123d9f450e7916", null ],
     [ "ResolveOp", "classIRAD_1_1Comm_1_1CommunicatorObject.html#ab8d3a56070a038773bca99d935514914", null ],
+    [ "Scatterv", "classIRAD_1_1Comm_1_1CommunicatorObject.html#a785238e2ad394c4b3cb0109a2879aead", null ],
     [ "SendAll", "classIRAD_1_1Comm_1_1CommunicatorObject.html#aad0b66844702a94b2dc6bb917eac833d", null ],
     [ "SetErr", "classIRAD_1_1Comm_1_1CommunicatorObject.html#abd74c8c53a5355725a71008957608561", null ],
     [ "SetExit", "classIRAD_1_1Comm_1_1CommunicatorObject.html#a9d99a47aba56e2bae443a989ef852970", null ],
