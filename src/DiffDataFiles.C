@@ -167,7 +167,6 @@ namespace IRAD
     std::stringstream ss1, ss2, ssPrint1, ssPrint2;
     int lineNo = 0;
     bool lineDiff = false, numDiff = false;
-    *Out << "File     line:              content" << std::endl;
     while(!InFile1.eof() || !InFile2.eof()){
       lineNo++;
       if(!InFile1.eof())
@@ -250,6 +249,8 @@ namespace IRAD
         printString1 = printString2 = string2 = "";
       }
       if(lineDiff){
+        if(lineNo == 1)
+          *Out << "File     line:              content" << std::endl;
         *Out << std::setw(4) << std::right << "1" << " " << std::setw(8) 
              << lineNo << ": " << ssPrint1.str() << std::endl
              << std::setw(4) << std::right << "2" << " " << std::setw(8) 
