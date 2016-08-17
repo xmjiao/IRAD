@@ -8,6 +8,7 @@
 #define _COMM_H_
 #include "mpi.h"
 #include <cstdlib>
+#include <stdint.h>
 
 #include "primitive_utilities.H"
 
@@ -36,9 +37,9 @@ namespace IRAD {
       const void *GetBuffer() const { return (_buf); };
       void *GetBuffer() {return (_buf); };
       int BufSize() { return(_bsize); };
-      virtual int PrepareBuffer(size_t bsize);
-      virtual int Pack(void **inbuf = NULL);
-      virtual int UnPack(const void *outbuf = NULL);
+      virtual int PrepareBuffer(size_t bsize) = 0;
+      virtual int Pack(void **inbuf = NULL) = 0;
+      virtual int UnPack(const void *outbuf = NULL) = 0;
       virtual void DestroyBuffer() 
       { 
 	if(_buf && _mine) 

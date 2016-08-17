@@ -5,7 +5,11 @@
 ///
 #include <sstream>
 #include <cstdlib>
-
+#include <stdlib.h>
+#include <fcntl.h>
+#ifdef _WIN32
+#include <WinSock2.h>
+#endif
 #include "UnixUtils.H"
 
 extern char **environ;
@@ -13,11 +17,22 @@ extern char **environ;
 namespace IRAD {
   namespace Sys {
 
+
+	//these permission mode bits mean nothing for windows, as far as I can tell. Windows doesn't use these permissions.
+#ifdef _WIN32
+    #define S_IRGRP 0
+    #define S_IXGRP 0
+#endif
+	  static const char letters[] =
+		  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+
     int Rename(const std::string &source_file,const std::string &target_file)
     {
       return(rename(source_file.c_str(),target_file.c_str()));
     }
-    int SymLink(const std::string &source,const std::string &target)
+	//removed until doing symlinks in Windows C++ is figured out (seems to work now)
+   int SymLink(const std::string &source,const std::string &target)
     {
       return(symlink(source.c_str(),target.c_str()));
     }
@@ -79,7 +94,15 @@ namespace IRAD {
     bool FILEEXISTS(const std::string &fname)
     {
       struct stat fstat;
+	  //changed to stat from lstat because there's no lstat on windows and symlink functionality doesn't work on here yet, and 
+	  //symlinks aren't as frequently used on  (THIS HAS BEEN FIXED WITH THE NTLINK LIBRARY)
+#ifdef __linux__
       if(lstat(fname.c_str(),&fstat))
+		  return false;
+#elif _WIN32 
+	  if(lstat(fname.c_str(),&fstat))
+	      return false;
+#endif
 	return false;
       return true;
     }
@@ -93,12 +116,13 @@ namespace IRAD {
 	return true;
       return false;
     }
-
-    bool ISLINK(const std::string &fname)
+	//removing ISLINK because there's no ISLNK macro in windows, well its not the same as linux and I haven't gotten to figure it out yet
+	//maybe something similar is in MinGW's implementation of stat (WORKS NOW)
+   bool ISLINK(const std::string &fname)
     {
       struct stat fstat;
       if(lstat(fname.c_str(),&fstat))
-	return false;
+	    return false;
       if(S_ISLNK(fstat.st_mode))
 	return true;
       return(false);
@@ -106,7 +130,12 @@ namespace IRAD {
 
     int CreateDirectory(const std::string &fname)
     {
-      return(mkdir(fname.c_str(),S_IRGRP | S_IXGRP  | S_IRWXU));
+#ifdef __linux__
+	 return(mkdir(fname.c_str(), S_IRGRP | S_IXGRP | S_IRWXU));
+#elif _WIN32
+     return (_mkdir(fname.c_str()));
+	  
+#endif
     }
 
     const std::string ResolveLink(const std::string &path)
@@ -274,7 +303,28 @@ namespace IRAD {
     int
     Environment::SetEnv(const std::string &var,const std::string &val,bool ow)
     {
-      int retVal = setenv(var.c_str(),val.c_str(),(int)ow);
+		int retVal = 0;
+#ifdef __linux__
+		retVal = setenv(var.c_str(),val.c_str(),(int)ow);
+#elif _WIN32 
+		if (ow) {
+            retVal = _putenv_s(var.c_str(), val.c_str());
+		}
+
+		else {
+			size_t requiredSize; 
+			char * retPtr = getenv(var.c_str());
+			if (retPtr == NULL) {
+				retVal = -1;
+			}
+
+			else {
+				retVal = 0;
+			}
+		}
+		
+#endif
+	  
       this->init();
       return(retVal);
     }
@@ -282,7 +332,7 @@ namespace IRAD {
     void
     Environment::UnSetEnv(const std::string &var)
     {
-      unsetenv(var.c_str());
+		_putenv_s(var.c_str(), "");
       this->init();
     }
 
@@ -290,7 +340,7 @@ namespace IRAD {
     int
     Environment::ClearEnv()
     {
-      clearenv();
+		_environ = NULL;
       this->init();
       return(1);
     }
@@ -350,6 +400,98 @@ namespace IRAD {
       }
       return(output);
     }
+
+	/* Generate a temporary file name based on TMPL.  TMPL must match the
+	rules for mk[s]temp (i.e. end in "XXXXXX").  The name constructed
+	does not exist at the time of the call to mkstemp.  TMPL is
+	overwritten with the result.  */
+	int mkstemp(char *tmpl)
+	{
+		int len;
+		char *XXXXXX;
+		static unsigned long long value;
+		unsigned long long random_time_bits;
+		unsigned int count;
+		int fd = -1;
+		int save_errno = errno;
+
+		/* A lower bound on the number of temporary files to attempt to
+		generate.  The maximum total number of temporary file names that
+		can exist for a given template is 62**6.  It should never be
+		necessary to try all these combinations.  Instead if a reasonable
+		number of names is tried (we define reasonable as 62**3) fail to
+		give the system administrator the chance to remove the problems.  */
+#define ATTEMPTS_MIN (62 * 62 * 62)
+
+		/* The number of times to attempt to generate a temporary file.  To
+		conform to POSIX, this must be no smaller than TMP_MAX.  */
+#if ATTEMPTS_MIN < TMP_MAX
+		unsigned int attempts = TMP_MAX;
+#else
+		unsigned int attempts = ATTEMPTS_MIN;
+#endif
+
+		len = strlen(tmpl);
+		if (len < 6 || strcmp(&tmpl[len - 6], "XXXXXX"))
+		{
+			errno = EINVAL;
+			return -1;
+		}
+
+		/* This is where the Xs start.  */
+		XXXXXX = &tmpl[len - 6];
+
+		/* Get some more or less random data.  */
+		{
+			SYSTEMTIME      stNow;
+			FILETIME ftNow;
+
+			// get system time
+			GetSystemTime(&stNow);
+			stNow.wMilliseconds = 500;
+			if (!SystemTimeToFileTime(&stNow, &ftNow))
+			{
+				errno = -1;
+				return -1;
+			}
+
+			random_time_bits = (((unsigned long long)ftNow.dwHighDateTime << 32)
+				| (unsigned long long)ftNow.dwLowDateTime);
+		}
+		value += random_time_bits ^ (unsigned long long)GetCurrentThreadId();
+
+		for (count = 0; count < attempts; value += 7777, ++count)
+		{
+			unsigned long long v = value;
+
+			/* Fill in the random bits.  */
+			XXXXXX[0] = letters[v % 62];
+			v /= 62;
+			XXXXXX[1] = letters[v % 62];
+			v /= 62;
+			XXXXXX[2] = letters[v % 62];
+			v /= 62;
+			XXXXXX[3] = letters[v % 62];
+			v /= 62;
+			XXXXXX[4] = letters[v % 62];
+			v /= 62;
+			XXXXXX[5] = letters[v % 62];
+
+			fd = open(tmpl, O_RDWR | O_CREAT | O_EXCL, _S_IREAD | _S_IWRITE);
+			if (fd >= 0)
+			{
+				errno = save_errno;
+				return fd;
+			}
+			else if (errno != EEXIST)
+				return -1;
+		}
+
+		/* We got out of the loop because we ran out of combinations to try.  */
+		errno = EEXIST;
+		return -1;
+	}
+
   };
 };
 

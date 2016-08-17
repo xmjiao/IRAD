@@ -14,7 +14,9 @@
 #include <cstdio>
 #include <cstring>
 #include <sstream>
-
+#ifdef _WIN32
+#include <WinSock2.h>
+#endif
 //#include "primitive_utilities.H"
 
 namespace IRAD { 

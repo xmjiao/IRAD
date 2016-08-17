@@ -20,11 +20,16 @@
 #include <iostream>
 #include <cstdlib>
 #include <errno.h>
+#include <direct.h>
+#include <quasisymlink.h>
 
 namespace IRAD {
 
   /// Unix system utilities
   namespace Sys {
+#ifdef _WIN32 
+	  int mkstemp(char * tmpl);
+#endif
     std::string LogTime();
     void TokenizePath(std::vector<std::string> rv,const std::string &path);
     std::string TempFileName(const std::string &stub);
