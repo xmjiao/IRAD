@@ -181,7 +181,6 @@ namespace IRAD {
       ///
       void AddArgument(const std::string &a,int reqd = 0)
       {
-	//_args.push_back(std::make_pair<std::string,int>(a,reqd));
 	_args.push_back(std::make_pair(a,reqd));
       };
       /// 

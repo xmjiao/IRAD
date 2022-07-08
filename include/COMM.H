@@ -479,7 +479,7 @@ namespace IRAD {
 	if(_rank == root){
 	  std::vector<int>::iterator nsi = nsend_all.begin();
 	  while(nsi != nsend_all.end())
-	    nrecv += nsi++;
+	    nrecv += *(nsi++);
 	  recvvec.resize(nrecv);
 	}
 	std::vector<MobileObject *> send_v(nsend,NULL);
@@ -526,7 +526,7 @@ namespace IRAD {
 	if(_rank == root){
 	  std::vector<int>::iterator nsi = nsend_all.begin();
 	  while(nsi != nsend_all.end())
-	    nrecv += nsi++;
+	    nrecv += *(nsi++);
 	  recvvec.resize(nrecv);
 	}
 	std::vector<MobileObject *> send_v(nsend,NULL);
@@ -558,7 +558,7 @@ namespace IRAD {
 	if(_rank == root){
 	  std::vector<int>::iterator nsi = nsend_all.begin();
 	  while(nsi != nsend_all.end())
-	    nrecv += nsi++;
+	    nrecv += *(nsi++);
 	  recvvec.resize(nrecv);
 	}
 	std::vector<MobileObject *> send_v(nsend,NULL);
@@ -590,7 +590,7 @@ namespace IRAD {
 	if(_rank == root){
 	  std::vector<int>::iterator nsi = nsend_all.begin();
 	  while(nsi != nsend_all.end())
-	    nrecv += nsi++;
+	    nrecv += *(nsi++);
 	  recvvec.resize(nrecv);
 	}
 	std::vector<MobileObject *> send_v(nsend,NULL);
